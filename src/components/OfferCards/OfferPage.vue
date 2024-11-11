@@ -2,7 +2,7 @@
     <div>
         <div
             class="offer-hero"
-            :style="{ backgroundImage: `url(${trainingData.imgSrc})` }"
+            :style="{ backgroundImage: `url(${trainingData.imgSrc0})` }"
         >
             <div class="offer-promo">
                 <div class="subtitle">{{ trainingData.subtitle }}</div>
@@ -77,7 +77,7 @@
             <div class="video-container">
                 <video
                     class="video-player"
-                    :src="VideoSrc"
+                    src="/images/promo/HSCwww2.mp4"
                     autoplay
                     loop
                     muted
@@ -102,7 +102,6 @@
 <script>
 import { computed, ref } from "vue";
 import Modal from "../home/Modal.vue";
-import VideoContent from "@/assets/VideoContent.mp4";
 import Footer from "../home/15Footer.vue";
 import { offerData } from "@/data/offerData";
 import TimetableBox from "./TimetableBox.vue";
@@ -116,11 +115,6 @@ export default {
         Footer,
         TimetableBox,
         CoachCards,
-    },
-    data() {
-        return {
-            VideoSrc: VideoContent,
-        };
     },
     props: {
         service: {

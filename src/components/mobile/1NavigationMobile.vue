@@ -303,6 +303,7 @@ p.top {
     letter-spacing: -0.005rem;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .sub-nav-link {

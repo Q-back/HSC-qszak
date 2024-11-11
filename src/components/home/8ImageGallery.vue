@@ -7,7 +7,7 @@
             :pagination="true"
             :modules="modules"
             :loop="true"
-            :spaceBetween="524"
+            :spaceBetween="324"
             :initialSlide="1"
             :breakpoints="{
                 1300: {

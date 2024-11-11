@@ -1,8 +1,7 @@
 <template>
-
-<div class="offer-slider">
+    <div class="offer-slider">
         <OfferCard
-            v-for="(offer, index) in offers" 
+            v-for="(offer, index) in offers"
             :key="index"
             :service="offer.service"
             :subtitle="offer.subtitle"
@@ -13,26 +12,23 @@
 </template>
 
 <script>
-import { offerData } from '@/data/offerData';
-import OfferCard from '../OfferCards/OfferCard.vue';
-
+import { offerData } from "@/data/offerData";
+import OfferCard from "../OfferCards/OfferCard.vue";
 
 export default {
-    name: 'OfferSlider',
+    name: "OfferSlider",
     components: {
-      OfferCard,
+        OfferCard,
     },
     data() {
         return {
             offers: offerData,
         };
-    }
-}
+    },
+};
 </script>
 
-
 <style scoped>
-
 .offer-slider {
     display: flex;
     padding: 6rem 4.5rem;
@@ -43,5 +39,4 @@ export default {
     align-self: stretch;
     flex-wrap: wrap;
 }
-
 </style>

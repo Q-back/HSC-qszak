@@ -1,9 +1,9 @@
 <template>
     <footer>
         <div class="section">
-            <div class="logo">
+            <RouterLink to="/" class="logo">
                 <LogoHSC2 />
-            </div>
+            </RouterLink>
             <div class="menu">
                 <RouterLink to="/" class="item">Strona Główna</RouterLink>
                 <RouterLink to="/o-nas" class="item">O nas</RouterLink>

@@ -215,6 +215,7 @@ li {
     text-decoration: none;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 .chevron-down {
     transition: transform 0.3s ease;

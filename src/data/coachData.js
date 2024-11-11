@@ -134,7 +134,7 @@ export const coachData = [
         name: "Przemysław Gąska",
         position: "Trener Personalny",
         skills: "personal",
-        imgSrc: "/images/kadra/PrzemysławGąska.jpg",
+        imgSrc: "/images/kadra/PrzemysławGąska.png",
         imgAlt: "Zdjęcie Przemysława Gąski",
         description:
             "Jestem trenerem personalnym młodzieży, osób dorosłych oraz seniorów. Swoją karierę rozpocząłem w 2019 roku. Moim celem jest ciągły rozwój i innowacyjne podejście do ruchu, zdrowia, diety oraz programów treningowych. Jestem kreatywnym pasjonatem, zawdzięczającym swoje swoje sukcesy zdrowemu podejściu do sportu, żywienia oraz profesjonalizmowi w wykonywanym zawodzie. Mimo młodego wieku, skala sukcesów treningowych pozwala mi wejść w rolę eksperta w pracy z ludzkim ciałem. Od początku swojej kariery bazuję na unikatowym i indywidualnym podejściu do treningów personalnych. Charakteryzuje mnie determinacja oraz konsekwentne i skuteczne działanie. Widząc człowieka, widzę jego potrzeby. Mając dobry kontakt z podopiecznymi, potrafię w krótkim czasie wykonać diagnozę stworzyć protokół/plan treningowy i sięgać po założone cele.\n*Zbudowanie estetycznej sylwetki\n*Zwiększenie siły\n*Redukcja bólu i kontuzji\n*Indywidualne plany treningowe\n*Korekcja wad postawy\n*Bezpieczne spalanie tkanki tłuszczowej\n*Nauka poprawnej techniki ćwiczeń\n*Dbałość o to, aby trening był przyjemną formą aktywności fizycznej i spędzenia czasu",

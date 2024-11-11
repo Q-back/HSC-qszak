@@ -23,7 +23,7 @@
                 :pagination="true"
                 :modules="modules"
                 :loop="true"
-                :spaceBetween="524"
+                :spaceBetween="354"
                 :initialSlide="1"
                 :breakpoints="{
                     960: {

@@ -12,19 +12,25 @@
                 Natalia Zieniewicz
             </p>
             <p class="text-block-text">
-                Psycholog, psychodietetyk oraz certyfikowana hipnoterapeutka.
-                Jej podejście łączy psychologię, dietetykę i hipnoterapię, co
-                pozwala kompleksowo, szybko i skutecznie pomagać pacjentom w
-                osiąganiu celów i pokonywaniu przeszkód. Swoje doświadczenie
-                zawodowe zdobywała w szpitalu psychiatrycznym, ośrodku leczenia
-                zaburzeń odżywiania, poradniach psychologicznych oraz
-                stowarzyszeniach pomagających osobom w kryzysie zdrowia
-                psychicznego. Jeżeli mierzysz się z emocjonalnym jedzeniem, nie
-                możesz schudnąć mimo diety i treningów, cierpisz na zaburzenia
-                lękowe, fobie, bezsenność, mierzysz się z nałogiem, chcesz
-                pozbyć się ograniczających przekonań, lub wręcz przeciwnie -
-                poprawić swoje osiągnięcia i skutecznie się zmotywować,
-                zapraszamy na sesje indywidualne.
+                Dział Hipnoterapii w Holistic Sport Center to wyjątkowe miejsce,
+                które oferuje wsparcie dla osób pragnących pracować nad swoimi
+                celami i wyzwaniami mentalnymi za pomocą sprawdzonych metod
+                terapeutycznych.<br />Sesje hipnoterapii prowadzi Natalia –
+                doświadczona hipnoterapeutka oraz psychodietetyk, która z
+                empatią i profesjonalizmem wspiera klientów w zmianie nawyków,
+                wzmocnieniu motywacji oraz radzeniu sobie z trudnościami
+                emocjonalnymi. W naszym gabinecie stawiamy na indywidualne
+                podejście, dlatego Natalia dostosowuje sesje hipnoterapii do
+                unikalnych potrzeb każdej osoby, pomagając odkrywać i usuwać
+                blokady, które mogą stać na drodze do zdrowszego i bardziej
+                satysfakcjonującego życia.<br />Hipnoterapia, prowadzona przez
+                wykwalifikowanego specjalistę, może wspomóc między innymi w
+                zakresie kontroli stresu, rozwijania zdrowych nawyków, pracy nad
+                samoakceptacją oraz wzmocnienia motywacji do osiągania celów.<br />
+                Zapraszamy do skorzystania z profesjonalnych usług hipnoterapii
+                w Holistic Sport Center – miejsca, gdzie dbamy o równowagę ciała
+                i umysłu, łącząc zdrowy styl życia z narzędziami, które
+                wspomagają pełen rozwój osobisty.
             </p>
         </div>
         <div class="photo">
@@ -37,17 +43,50 @@
     <div class="service-section">
         <p class="service-section-header">Zakres usług</p>
         <div class="service-section-block">
-            <div class="service-section-block-column">
-                <p class="service-section-block-column-text">
-                    emocjonalne jedzenie
-                </p>
-                <p class="service-section-block-column-text">
-                    zaburzenia lękowe
-                </p>
-                <p class="service-section-block-column-text">fobie</p>
-                <p class="service-section-block-column-text">bezsenność</p>
-                <p class="service-section-block-column-text">nałogi</p>
-            </div>
+            <ul class="service-section-block-column">
+                <li class="service-section-block-column-text">
+                    <span>Hipnoza regresyjna:</span> Pozwala dotrzeć do źródła
+                    głęboko ukrytych blokad i traum z przeszłości, wpływających
+                    na obecne życie. Poprzez cofnięcie się do wydarzeń i
+                    sytuacji, które zapoczątkowały problem, daje zrozumienie i
+                    pozwala wyeliminować przeszkody stojące na drodze do
+                    spokoju, równowagi i pełni szczęścia. To głęboko
+                    transformująca metoda, która trwale zmienia sposób myślenia
+                    i podejście do przepracowywanego tematu. Hipnoza regresyjna
+                    jest polecana do pracy z ograniczającymi przekonaniami,
+                    zaburzeniami lękowymi, zaburzeniami odżywiania, chorobami
+                    psychosomatycznymi, nałogami, relacjami interpersonalnymi i
+                    stresem.
+                </li>
+                <li class="service-section-block-column-text">
+                    <span>Past Life Regression:</span> Umożliwia podróż do
+                    poprzednich wcieleń, aby odkryć wzorce i doświadczenia
+                    mogące wpływać na obecne życie. Ta wyjątkowa sesja oferuje
+                    przestrzeń do głębokiej refleksji i uwolnienia się od
+                    nieuświadomionych obciążeń. Polecana jest osobom, które
+                    poszukują głębszego sensu życiowych wyzwań, lub chcą poznać
+                    i zrozumieć siebie bardziej.
+                </li>
+                <li class="service-section-block-column-text">
+                    <span>Hipnoza relaksacyjna i rozwojowa</span> Doskonale
+                    sprawdza się, gdy potrzeba głębokiego relaksu, większej
+                    pewności siebie, lub motywacji do działania. Pomaga w
+                    regeneracji oraz odkrywaniu zasobów wewnętrznych, które
+                    można wykorzystać w codziennym życiu. Pozytywnie programuje
+                    na przyszłość, dając poczucie wewnętrznego spokoju,
+                    sprawczości i niwelując nieadaptacyjny stres. Ten rodzaj
+                    sesji polecany jest szczególnie przed ważnymi, stresującymi
+                    wydarzeniami, takimi jak zawody sportowe, wystąpienia
+                    publiczne, egzaminy, uroczystości.
+                </li>
+                <li class="service-section-block-column-text">
+                    <span>Konsultacja psychodietetyczna:</span> Łączy
+                    psychologię i dietetykę, by pomóc zrozumieć emocje leżące u
+                    podstaw nawyków żywieniowych. Tworzy spersonalizowaną
+                    strategię wspierającą budowanie zdrowej relacji z jedzeniem
+                    i osiąganie indywidualnych celów zdrowotnych.
+                </li>
+            </ul>
         </div>
     </div>
     <div class="contact-block">
@@ -58,27 +97,15 @@
                 <div class="mail"><Mail />holisticsportcenter@gmail.com</div>
             </div>
         </div>
-        <!-- <div class="working-hours">
+        <div class="working-hours">
             <p class="working-hours-header">Godziny pracy</p>
             <div class="hours-box">
                 <div class="hours">
-                    <p class="day">Poniedziałek</p>
-                    <p class="time">9:00-17:00</p>
-                </div>
-                <div class="hours">
-                    <p class="day">Środa</p>
-                    <p class="time">9:00-17:00</p>
-                </div>
-                <div class="hours">
-                    <p class="day">Piątek</p>
-                    <p class="time">9:00-17:00</p>
-                </div>
-                <div class="hours">
-                    <p class="day">Sobota</p>
-                    <p class="time">9:00-10:00</p>
+                    <p class="day">Poniedziałek - Piątek</p>
+                    <p class="time">7:00-21:00</p>
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
     <div class="promo">
         <div class="video-container">
@@ -270,9 +297,13 @@ export default {
         font-family: Montserrat;
         font-size: 1.125rem;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 400;
         line-height: 1.75rem;
         letter-spacing: -0.00563rem;
+    }
+
+    .service-section-block-column-text span {
+        font-weight: 700;
     }
 
     .contact-block {
@@ -592,9 +623,13 @@ export default {
         font-family: Montserrat;
         font-size: 1.125rem;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 400;
         line-height: 1.75rem;
         letter-spacing: -0.00563rem;
+    }
+
+    .service-section-block-column-text span {
+        font-weight: 700;
     }
 
     .contact-block {
@@ -914,9 +949,13 @@ export default {
         font-family: Montserrat;
         font-size: 1.125rem;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 400;
         line-height: 1.75rem;
         letter-spacing: -0.00563rem;
+    }
+
+    .service-section-block-column-text span {
+        font-weight: 700;
     }
 
     .contact-block {

@@ -235,13 +235,12 @@ export default {
         background: var(--Surface-Brand, #e30613);
         color: var(--Text-Inverse-primary, #fff);
         text-align: center;
-
-        /* Action/Large/Bold */
+        border-color: #e30613;
         font-family: Montserrat;
         font-size: 1.125rem;
         font-style: normal;
         font-weight: 700;
-        line-height: 1.5rem; /* 133.333% */
+        line-height: 1.5rem;
         text-transform: uppercase;
         cursor: pointer;
         margin: 0 auto;
@@ -385,7 +384,7 @@ export default {
         font-size: 1.125rem;
         font-style: normal;
         font-weight: 700;
-        line-height: 1.5rem; /* 133.333% */
+        line-height: 1.5rem;
         text-transform: uppercase;
         cursor: pointer;
         border-color: #e30613;
@@ -523,12 +522,13 @@ export default {
         gap: 0.625rem;
         background: var(--Surface-Brand, #e30613);
         color: #fff;
+        border-color: #e30613;
         text-align: center;
         font-family: "Montserrat";
         font-size: 1.125rem;
         font-style: normal;
         font-weight: 700;
-        line-height: 1.5rem; /* 133.333% */
+        line-height: 1.5rem;
         text-transform: uppercase;
         cursor: pointer;
     }

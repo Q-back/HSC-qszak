@@ -9,16 +9,24 @@
         <div class="text-block">
             <p class="text-block-header">Fizjoterapeuta<br />Łukasz Szefner</p>
             <p class="text-block-text">
-                Studia licencjackie oraz magisterskie ukończył na Wrocławskiej
-                Akademii Wychowania Fizycznego oraz w Wyższej Szkole
-                Fizjoterapii. Specjalizuje się w diagnozowaniu zaburzeń i
-                dysfunkcji w obrębie narządu ruchu. Ukończył specjalistyczne
-                kursy i szkolenia z zakresu medycyny manualnej, terapii tkanek
-                miękkich, masażu tkanek głębokich, igłoterapii suchej,
-                pinoterapii, treningu funkcjonalnego. Zdobytą wiedzę teoretyczną
-                i praktyczną oraz doświadczenie zawodowe wykorzystuje, aby
-                sprawnie i kompleksowo pomagać pacjentom powrócić do pełnej
-                sprawności.
+                Jesteś aktualnie w miejscu, w którym zapewniamy kompleksową
+                pomoc w zakresie rehabilitacji, regeneracji oraz poprawy
+                sprawności fizycznej.<br />Naszym specjalistą jest Łukasz –
+                doświadczony fizjoterapeuta, który z zaangażowaniem i
+                profesjonalizmem wspiera klientów w powrocie do pełnej
+                sprawności, poprawie mobilności i profilaktyce urazów. Łukasz
+                pracuje zarówno z osobami, które potrzebują rehabilitacji po
+                kontuzjach czy operacjach, jak i z tymi, którzy chcą zadbać o
+                swoje ciało, poprawić wyniki sportowe lub zapobiec przeciążeniom
+                wynikającym z intensywnego treningu.<br />W gabinecie
+                fizjoterapii stawiamy na indywidualne podejście do każdego
+                klienta, uwzględniając jego potrzeby, cele oraz aktualny stan
+                zdrowia. Zapraszamy do korzystania z usług fizjoterapeutycznych
+                w Holistic Sport Center, gdzie troska o zdrowie i sprawność
+                fizyczną jest naszym priorytetem.<br />Dzięki doświadczeniu
+                Łukasza i nowoczesnym metodom terapii, nasi klienci mogą liczyć
+                na profesjonalną pomoc oraz kompleksowe wsparcie na każdym
+                etapie powrotu do zdrowia i formy.
             </p>
         </div>
         <div class="photo">
@@ -28,24 +36,32 @@
     <div class="service-section">
         <p class="service-section-header">Zakres usług</p>
         <div class="service-section-block">
-            <div class="service-section-block-column">
-                <p class="service-section-block-column-text">
-                    terapia manualna
-                </p>
-                <p class="service-section-block-column-text">
-                    terapia tkanek miekkich
-                </p>
-                <p class="service-section-block-column-text">
-                    masaż tkanek głębokich
-                </p>
-                <p class="service-section-block-column-text">
-                    igłoterapia sucha
-                </p>
-                <p class="service-section-block-column-text">pinoterapia</p>
-                <p class="service-section-block-column-text">
-                    trening funkcjonalny
-                </p>
-            </div>
+            <ul class="service-section-block-column">
+                <li class="service-section-block-column-text">
+                    <span>Terapia manualna:</span> forma leczenia, w której
+                    terapeuta stosuje techniki mobilizacji i manipulacji stawów
+                    oraz tkanek miękkich. Celem jest przywrócenie prawidłowej
+                    ruchomości, zmniejszenie bólu oraz złagodzenie napięć
+                    mięśniowych.
+                </li>
+                <li class="service-section-block-column-text">
+                    <span>Masaż tkanek głębokich:</span> rodzaj masażu, który
+                    koncentruje się na głębszych warstwach mięśni i tkanki
+                    łącznej, stosowany w celu rozluźnienia przewlekłych napięć
+                    mięśniowych.
+                </li>
+                <li class="service-section-block-column-text">
+                    <span>Igłoterapia sucha:</span> wprowadzanie cienkich igieł
+                    w wybrane punkty mięśniowe, co pozwala na redukcję napięcia
+                    i bólu. Metoda ta wspomaga proces gojenia oraz poprawia
+                    funkcjonowanie układu mięśniowo- szkieletowego.
+                </li>
+                <li class="service-section-block-column-text">
+                    <span>Kinesiotaping:</span> naklejanie elastycznych taśm na
+                    skórę w celu wsparcia mięśni i stawów, zmniejszenia bólu i
+                    poprawy krążenia.
+                </li>
+            </ul>
         </div>
     </div>
     <div class="contact-block">
@@ -56,27 +72,15 @@
                 <div class="mail"><Mail />holisticsportcenter@gmail.com</div>
             </div>
         </div>
-        <!-- <div class="working-hours">
+        <div class="working-hours">
             <p class="working-hours-header">Godziny pracy</p>
             <div class="hours-box">
                 <div class="hours">
-                    <p class="day">Poniedziałek</p>
-                    <p class="time">9:00-17:00</p>
-                </div>
-                <div class="hours">
-                    <p class="day">Środa</p>
-                    <p class="time">9:00-17:00</p>
-                </div>
-                <div class="hours">
-                    <p class="day">Piątek</p>
-                    <p class="time">9:00-17:00</p>
-                </div>
-                <div class="hours">
-                    <p class="day">Sobota</p>
-                    <p class="time">9:00-10:00</p>
+                    <p class="day">Poniedziałek i Piątek</p>
+                    <p class="time">7:00-21:00</p>
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
     <div class="promo">
         <div class="video-container">
@@ -269,9 +273,13 @@ export default {
         font-family: Montserrat;
         font-size: 1.125rem;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 400;
         line-height: 1.75rem;
         letter-spacing: -0.00563rem;
+    }
+
+    .service-section-block-column-text span {
+        font-weight: 700;
     }
 
     .contact-block {
@@ -591,9 +599,13 @@ export default {
         font-family: Montserrat;
         font-size: 1.125rem;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 400;
         line-height: 1.75rem;
         letter-spacing: -0.00563rem;
+    }
+
+    .service-section-block-column-text span {
+        font-weight: 700;
     }
 
     .contact-block {
@@ -912,9 +924,13 @@ export default {
         font-family: Montserrat;
         font-size: 1.125rem;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 400;
         line-height: 1.75rem;
         letter-spacing: -0.00563rem;
+    }
+
+    .service-section-block-column-text span {
+        font-weight: 700;
     }
 
     .contact-block {

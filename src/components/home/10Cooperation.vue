@@ -10,54 +10,77 @@
             class="brands"
         >
             <swiper-slide class="logo">
-                <a href="https://www.borkowskiwspolnicy.pl/">
-                    <img
-                        src="/images/logos/Borkowski logo rgb.png"
-                        alt="Logo Borkowski i Wspólnicy"
-                    />
-                </a>
+                <div class="img-box">
+                    <a href="https://www.borkowskiwspolnicy.pl/">
+                        <img
+                            src="/images/logos/Borkowski logo rgb.png"
+                            alt="Logo Borkowski i Wspólnicy"
+                        />
+                    </a>
+                </div>
             </swiper-slide>
 
             <swiper-slide class="logo">
-                <a href="https://cudostudio.pl/">
-                    <img src="/images/logos/cudo.png" alt="Logo Studio CUDO" />
-                </a>
+                <div class="img-box">
+                    <a href="https://cudostudio.pl/">
+                        <img
+                            src="/images/logos/cudo.png"
+                            alt="Logo Studio CUDO"
+                        />
+                    </a>
+                </div>
             </swiper-slide>
 
             <swiper-slide class="logo">
-                <a href="https://iron-gym.pl/">
-                    <img src="/images/logos/irongym.jpg" alt="Logo IronGym" />
-                </a>
+                <div class="img-box">
+                    <a href="https://iron-gym.pl/">
+                        <img
+                            src="/images/logos/irongym.jpg"
+                            alt="Logo IronGym"
+                        />
+                    </a>
+                </div>
             </swiper-slide>
 
             <swiper-slide class="logo">
-                <a href="https://berserkersteamwroclaw.com/">
-                    <img
-                        src="/images/logos/berserkers.jpg"
-                        alt="Logo Berserkers Team"
-                    />
-                </a>
+                <div class="img-box">
+                    <a href="https://berserkersteamwroclaw.com/">
+                        <img
+                            src="/images/logos/berserkers.jpg"
+                            alt="Logo Berserkers Team"
+                        />
+                    </a>
+                </div>
             </swiper-slide>
 
             <swiper-slide class="logo">
-                <a href="https://sandras.fit/">
-                    <img src="/images/logos/sandras.png" alt="Logo Sandra's" />
-                </a>
+                <div class="img-box">
+                    <a href="https://sandras.fit/">
+                        <img
+                            src="/images/logos/sandras.png"
+                            alt="Logo Sandra's"
+                        />
+                    </a>
+                </div>
             </swiper-slide>
 
             <swiper-slide class="logo">
-                <a href="https://imprimature.co/">
-                    <img
-                        src="/images/logos/imprimature.png"
-                        alt="Logo Imprimature"
-                    />
-                </a>
+                <div class="img-box">
+                    <a href="https://imprimature.co/">
+                        <img
+                            src="/images/logos/imprimature.png"
+                            alt="Logo Imprimature"
+                        />
+                    </a>
+                </div>
             </swiper-slide>
 
             <swiper-slide class="logo">
-                <a href="https://ocludo.pl/">
-                    <img src="/images/logos/ocludo.png" alt="Logo Ocludo" />
-                </a>
+                <div class="img-box">
+                    <a href="https://ocludo.pl/">
+                        <img src="/images/logos/ocludo.png" alt="Logo Ocludo" />
+                    </a>
+                </div>
             </swiper-slide>
         </swiper>
     </section>
@@ -86,7 +109,7 @@ export default {
     text-align: center;
 }
 
-.cooperations .claim {
+.claim {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 30px;
@@ -121,7 +144,7 @@ export default {
 
 .logo:hover img {
     filter: grayscale(0);
-    transform: scale(1.1); /* Powiększenie przy hover */
+    transform: scale(1.1);
 }
 
 @media (max-width: 640px) {
@@ -156,29 +179,21 @@ export default {
         align-self: stretch;
     }
     .logo {
-        width: 7rem;
-        height: 7rem;
+        width: 9rem;
+        height: 9rem;
+    }
+
+    .img-box {
+        width: 100%;
+        height: 100%;
     }
 
     img {
-        max-width: 80%;
-        max-height: 80%;
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 
-/* @media (max-width: 960px) {
-    .swiper {
-        padding: 20px;
-    }
-
-    .swiper-slide {
-        width: 120px;
-    }
-
-    .logo {
-        width: 120px;
-    }
-} */
 @media (min-width: 640px) and (max-width: 960px) {
     section.cooperations {
         display: flex;
@@ -211,13 +226,16 @@ export default {
         align-self: stretch;
     }
     .logo {
-        width: 72px;
-        height: 72px;
+        width: 11rem;
+        height: 11rem;
+    }
+    .img-box {
+        width: 100%;
+        height: 100%;
     }
     img {
         max-width: 80%;
         max-height: 80%;
-        object-fit: contain;
     }
 }
 
@@ -237,7 +255,7 @@ export default {
 
         color: var(--Text-Background-text-inverse, #313131);
         font-family: Montserrat;
-        font-size: 3rem;
+        font-size: 4rem;
         font-style: normal;
         font-weight: 700;
         line-height: 4rem;
@@ -253,13 +271,18 @@ export default {
         align-self: stretch;
     }
     .logo {
-        width: 120px;
-        height: 120px;
+        width: 12rem;
+        height: 12rem;
     }
+
+    .img-box {
+        width: 100%;
+        height: 100%;
+    }
+
     .logo img {
         max-width: 80%;
         max-height: 80%;
-        object-fit: contain;
     }
 }
 </style>

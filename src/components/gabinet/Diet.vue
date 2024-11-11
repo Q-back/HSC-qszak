@@ -8,7 +8,28 @@
     <div class="description-section">
         <div class="text-block">
             <p class="text-block-header">Dietetyka</p>
-            <p class="text-block-text"></p>
+            <p class="text-block-text">
+                Dział Dietetyki w Holistic Sport Center został stworzony z myślą
+                o kompleksowym wsparciu osób, które pragną świadomie dbać o
+                swoje zdrowie, kondycję oraz osiągać lepsze efekty treningowe.
+                Nasze centrum oferuje indywidualne konsultacje dietetyczne
+                prowadzone przez wykwalifikowanego specjalistę, który pomoże
+                dobrać odpowiedni plan żywieniowy, dostosowany do indywidualnych
+                celów, trybu życia oraz preferencji każdej osoby. Dietetyk
+                dostępny w naszym gabinecie posiada szeroką wiedzę na temat
+                zbilansowanej diety oraz jej wpływu na organizm, a także
+                doświadczenie w pracy z osobami na różnych poziomach
+                zaawansowania treningowego – od początkujących po zaawansowanych
+                sportowców.<br />Podczas konsultacji możliwe jest omówienie
+                aktualnych nawyków żywieniowych, identyfikacja obszarów
+                wymagających poprawy oraz opracowanie planu, który wspomoże
+                zarówno zdrowie fizyczne, jak i psychiczne.<br />Zapraszamy do
+                korzystania z profesjonalnych usług dietetycznych, które
+                wspierają osiąganie trwałych efektów oraz poprawiają jakość
+                życia. W Holistic Sport Center stawiamy na holistyczne podejście
+                do zdrowia – łączymy wiedzę o treningu z odpowiednią dietą, aby
+                nasi klienci mogli cieszyć się pełnią sił i energii na co dzień.
+            </p>
         </div>
         <div class="photo">
             <img src="/images/HSCdiettransparent.png" alt="" />
@@ -17,21 +38,61 @@
     <div class="service-section">
         <p class="service-section-header">Zakres usług</p>
         <div class="service-section-block">
-            <div class="service-section-block-column">
-                <p class="service-section-block-column-text">nadwaga</p>
-                <p class="service-section-block-column-text">
-                    budowa nawyków żywieniowych
-                </p>
-                <p class="service-section-block-column-text">
-                    dietetyka w sportach walki
-                </p>
-                <p class="service-section-block-column-text">
-                    dietetyka dla sportowcóe
-                </p>
-                <p class="service-section-block-column-text">
-                    różnorodna dieta
-                </p>
-            </div>
+            <ul class="service-section-block-column">
+                <li class="service-section-block-column-text">
+                    <span>Pierwsza konsultacja dietetyczna:</span>
+                    Szczegółowy wywiad zdrowotny, obejmujący historię medyczną,
+                    obecny stan zdrowia, aktywność fizyczną i preferencje
+                    żywieniowe pacjenta. Analiza składu ciała za pomocą
+                    specjalistycznego sprzętu, aby określić m.in. poziom tkanki
+                    tłuszczowej, masę mięśniową i inne wskaźniki metaboliczne.
+                    Omówienie celów pacjenta (utrata masy ciała, zwiększenie
+                    masy mięśniowej, poprawa wyników sportowych, lepsze
+                    samopoczucie).
+                </li>
+                <li class="service-section-block-column-text">
+                    <span>Indywidualny plan żywieniowy:</span> Opracowanie
+                    spersonalizowanej diety, dostosowanej do stylu życia i
+                    preferencji pacjenta. Ustalenie harmonogramu posiłków, który
+                    będzie realistyczny i łatwy do wdrożenia w codzienne życie.
+                    Regularne monitorowanie postępów i dostosowywanie diety na
+                    kolejnych wizytach.
+                </li>
+                <li class="service-section-block-column-text">
+                    <span>Wizyty kontrolne:</span> Ocena postępów pacjenta i
+                    wprowadzenie ewentualnych zmian w planie żywieniowym. Pomiar
+                    składu ciała, aby śledzić zmiany w kompozycji masy ciała, a
+                    nie tylko wagi. Konsultacje dotyczące wyzwań i trudności w
+                    utrzymaniu diety, motywowanie pacjenta i udzielanie
+                    wskazówek.
+                </li>
+                <li class="service-section-block-column-text">
+                    <span>Diety terapeutyczne:</span> Tworzenie planów
+                    żywieniowych wspierających terapię różnych schorzeń, takich
+                    jak insulinooporność, nadciśnienie, cukrzyca, choroby
+                    tarczycy czy choroby układu pokarmowego. Edukacja pacjenta w
+                    zakresie stosowania zasad zdrowego odżywiania, które mogą
+                    wspierać terapię i zapobiegać zaostrzeniu objawów
+                    chorobowych.
+                </li>
+                <li class="service-section-block-column-text">
+                    <span>Dieta i sport:</span> Konsultacje dla osób aktywnych
+                    fizycznie i sportowców, w tym opracowanie diety wspierającej
+                    regenerację i poprawę wyników sportowych. Wsparcie dla osób
+                    uczęszczających na treningi (takie jak kickboxing czy BJJ w
+                    naszym centrum), aby pomóc im optymalizować dietę pod kątem
+                    wytrzymałości, siły i wydolności.
+                </li>
+                <li class="service-section-block-column-text">
+                    <span>Psychodietetyka:</span> Podejście holistyczne do zmian
+                    nawyków żywieniowych i wsparcie emocjonalne, aby pomóc
+                    pacjentom w długotrwałym wprowadzaniu zmian. Współpraca z
+                    naszym hipnoterapeutą i psychodietetykiem, Natalią, może
+                    pomóc osobom, które zmagają się z trudnościami w zmianie
+                    relacji z jedzeniem i wykształceniu zdrowych nawyków
+                    żywieniowych.
+                </li>
+            </ul>
         </div>
     </div>
     <div class="contact-block">
@@ -42,27 +103,15 @@
                 <div class="mail"><Mail />holisticsportcenter@gmail.com</div>
             </div>
         </div>
-        <!-- <div class="working-hours">
+        <div class="working-hours">
             <p class="working-hours-header">Godziny pracy</p>
             <div class="hours-box">
                 <div class="hours">
-                    <p class="day">Poniedziałek</p>
-                    <p class="time">9:00-17:00</p>
-                </div>
-                <div class="hours">
-                    <p class="day">Środa</p>
-                    <p class="time">9:00-17:00</p>
-                </div>
-                <div class="hours">
-                    <p class="day">Piątek</p>
-                    <p class="time">9:00-17:00</p>
-                </div>
-                <div class="hours">
-                    <p class="day">Sobota</p>
-                    <p class="time">9:00-10:00</p>
+                    <p class="day">Poniedziałek - Piątek</p>
+                    <p class="time">7:00-21:00</p>
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
     <div class="promo">
         <div class="video-container">
@@ -255,9 +304,13 @@ export default {
         font-family: Montserrat;
         font-size: 1.125rem;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 400;
         line-height: 1.75rem;
         letter-spacing: -0.00563rem;
+    }
+
+    .service-section-block-column-text span {
+        font-weight: 700;
     }
 
     .contact-block {
@@ -577,9 +630,13 @@ export default {
         font-family: Montserrat;
         font-size: 1.125rem;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 400;
         line-height: 1.75rem;
         letter-spacing: -0.00563rem;
+    }
+
+    .service-section-block-column-text span {
+        font-weight: 700;
     }
 
     .contact-block {
@@ -899,9 +956,13 @@ export default {
         font-family: Montserrat;
         font-size: 1.125rem;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 400;
         line-height: 1.75rem;
         letter-spacing: -0.00563rem;
+    }
+
+    .service-section-block-column-text span {
+        font-weight: 700;
     }
 
     .contact-block {

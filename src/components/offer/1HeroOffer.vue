@@ -1,42 +1,32 @@
 <template>
     <div class="hero-offer">
         <div class="video-container">
-    
-    <video
-    class="video-player"
-    :src="VideoSrc"
-    autoplay
-    loop
-    muted
-    playsinline
-    ></video>
+            <video
+                class="video-player"
+                src="/images/promo/HSCwww1.mp4"
+                autoplay
+                loop
+                muted
+                playsinline
+            ></video>
             <div class="text-box">
                 <div class="text-box-top">Nasza</div>
                 <div class="text-box-bottom">oferta</div>
             </div>
         </div>
     </div>
-
 </template>
 
 <script>
-import VideoContent from '@/assets/VideoHero.mp4';
-
-
 export default {
-    name: 'HeroOffer',
-
-    data() {
-         return {
-             VideoSrc: VideoContent,
-           };
-        },
-}
+    name: "HeroOffer",
+};
 </script>
 
 <style scoped>
 .hero-offer {
     width: calc(100svw - var(--scrollbarWidth));
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .video-container {
@@ -45,7 +35,7 @@ export default {
     height: 50vh;
     padding: 0rem var(--space-200, 1rem);
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
 }
 
@@ -63,11 +53,11 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 1; 
+    z-index: 1;
 }
 
 .text-box-top {
-    color: var(--Text-Inverse-primary, #FFF);
+    color: var(--Text-Inverse-primary, #fff);
     text-align: center;
     font-family: Montserrat;
     font-size: 1.125rem;
@@ -79,7 +69,7 @@ export default {
 }
 
 .text-box-bottom {
-    color: var(--Text-Inverse-primary, #FFF);
+    color: var(--Text-Inverse-primary, #fff);
     text-align: center;
     font-family: Montserrat;
     font-size: 4rem;
@@ -89,5 +79,4 @@ export default {
     letter-spacing: 0.08rem;
     text-transform: uppercase;
 }
-
 </style>

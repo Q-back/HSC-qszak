@@ -2,7 +2,7 @@
     <div class="video-container">
         <video
             class="video-asset"
-            :src="VideoSrc"
+            src="/images/promo/HSCwww1.mp4"
             autoplay
             loop
             muted
@@ -12,15 +12,8 @@
 </template>
 
 <script>
-import VideoAsset from "@/assets/VideoAsset.mp4";
-
 export default {
     name: "VideoAsset",
-    data() {
-        return {
-            VideoSrc: VideoAsset,
-        };
-    },
 };
 </script>
 
@@ -28,7 +21,7 @@ export default {
 .video-container {
     position: relative;
     width: calc(100vw - var(--scrollbarWidth));
-    height: 50svh;
+    height: 60svh;
     padding: 10rem;
     flex-direction: column;
     align-items: center;

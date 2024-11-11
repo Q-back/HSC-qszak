@@ -7,7 +7,7 @@
             :pagination="true"
             :modules="modules"
             :loop="true"
-            :spaceBetween="24"
+            :spaceBetween="304"
             :initialSlide="0"
             class="mySwiper"
         >

@@ -106,6 +106,7 @@ export default {
         line-height: 1.25rem;
         letter-spacing: 0.02rem;
         text-transform: uppercase;
+        background-color: rgba(0, 0, 0, 0.3);
     }
 
     .subtitle {
@@ -118,6 +119,7 @@ export default {
         font-weight: 400;
         line-height: 1.5rem;
         letter-spacing: -0.005rem;
+        background-color: rgba(0, 0, 0, 0.3);
     }
 
     .offer-card-bottom {
@@ -205,6 +207,7 @@ export default {
         line-height: 2rem;
         letter-spacing: 0.03rem;
         text-transform: uppercase;
+        background-color: rgba(0, 0, 0, 0.3);
     }
 
     .subtitle {
@@ -217,6 +220,7 @@ export default {
         font-weight: 400;
         line-height: 1.5rem;
         letter-spacing: -0.005rem;
+        background-color: rgba(0, 0, 0, 0.3);
     }
 
     .offer-card-bottom {

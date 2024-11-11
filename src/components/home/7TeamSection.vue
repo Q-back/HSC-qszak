@@ -21,7 +21,7 @@
                     :pagination="true"
                     :modules="modules"
                     :loop="true"
-                    :spaceBetween="104"
+                    :spaceBetween="304"
                     :initialSlide="0"
                     class="swiper-dynamic"
                 >
