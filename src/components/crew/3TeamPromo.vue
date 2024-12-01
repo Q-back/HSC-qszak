@@ -2,18 +2,18 @@
     <div class="promo-content">
         <p class="promo-text">Zacznij swoją zmianę od pierwszego kroku!</p>
         <button class="primary" @click="showModal">Dołącz do nas!</button>
-        <Modal :isVisible="isModalVisible" @close="closeModal"></Modal>
+        <Modal2 :isVisible="isModalVisible" @close="closeModal"></Modal2>
     </div>
 </template>
 
 <script>
 import { ref } from "vue";
-import Modal from "@/components/home/Modal.vue";
+import Modal2 from "../home/Modal2.vue";
 
 export default {
     name: "TeamPromo",
     components: {
-        Modal,
+        Modal2,
     },
 
     setup() {

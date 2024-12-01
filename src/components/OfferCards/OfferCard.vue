@@ -8,7 +8,10 @@
             class="offer-card-top"
             :style="{
                 backgroundImage: `url(${imgSrc})`,
-                filter: isHovered ? 'grayscale(0%)' : 'grayscale(100%)',
+                filter:
+                    isLargeScreen && !isHovered
+                        ? 'grayscale(100%)'
+                        : 'grayscale(0%)',
                 transition: 'filter 0.3s ease',
             }"
         >
@@ -23,14 +26,15 @@
                     name: 'Karta-Usługi',
                     params: { service: service, subtitle: subtitle },
                 }"
-                >Szczegóły usługi</RouterLink
             >
+                Szczegóły
+            </RouterLink>
         </div>
     </div>
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import { RouterLink } from "vue-router";
 
 export default {
@@ -45,9 +49,24 @@ export default {
     components: [RouterLink],
     setup() {
         const isHovered = ref(false); // Zmienna śledząca hover
+        const isLargeScreen = ref(window.innerWidth > 960); // Śledzi szerokość ekranu
+
+        // Funkcja aktualizująca stan ekranu
+        const handleResize = () => {
+            isLargeScreen.value = window.innerWidth > 960;
+        };
+
+        onMounted(() => {
+            window.addEventListener("resize", handleResize);
+        });
+
+        onBeforeUnmount(() => {
+            window.removeEventListener("resize", handleResize);
+        });
 
         return {
             isHovered,
+            isLargeScreen,
         };
     },
 };

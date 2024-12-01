@@ -68,8 +68,8 @@
         <div class="contact">
             <p class="contact-header">KONTAKT</p>
             <div class="contact-info">
-                <div class="phone"><Phone />+ 48 793 951 015</div>
-                <div class="mail"><Mail />holisticsportcenter@gmail.com</div>
+                <div class="phone"><Phone />+ 48 881 007 076</div>
+                <div class="mail"><Mail />szefner93@gmail.com</div>
             </div>
         </div>
         <div class="working-hours">
@@ -86,16 +86,19 @@
         <div class="video-container">
             <video
                 class="video-player"
-                :src="VideoSrc"
+                src="\images\promo\HSCwww4.mp4"
                 autoplay
                 loop
                 muted
                 playsinline
             ></video>
             <div class="content">
-                <p class="text">Trenuj z nami</p>
+                <!-- <p class="text">Trenuj z nami</p> -->
                 <button class="primary" @click="showModal">Zapisz się!</button>
-                <Modal :isVisible="isModalVisible" @close="closeModal"></Modal>
+                <Modal2
+                    :isVisible="isModalVisible"
+                    @close="closeModal"
+                ></Modal2>
             </div>
         </div>
     </div>
@@ -103,21 +106,44 @@
 </template>
 
 <script>
+import { ref } from "vue";
 import Footer from "../home/15Footer.vue";
-import VideoContent from "@/assets/VideoContent.mp4";
 import Phone from "../icons/phone.vue";
 import Mail from "../icons/mail.vue";
+import Modal2 from "../home/Modal2.vue";
 
 export default {
     name: "Physio",
     components: {
+        Modal2,
         Footer,
         Phone,
         Mail,
     },
-    data() {
+    setup() {
+        const isModalVisible = ref(false);
+        const showModal = () => {
+            isModalVisible.value = true;
+        };
+
+        const closeModal = () => {
+            isModalVisible.value = false;
+        };
+
+        const isDropdownVisible = ref(false);
+        const dropdownList = ref(null);
+
+        const toggleDropdown = () => {
+            isDropdownVisible.value = !isDropdownVisible.value;
+        };
+
         return {
-            VideoSrc: VideoContent,
+            isModalVisible,
+            isDropdownVisible,
+            showModal,
+            closeModal,
+            toggleDropdown,
+            dropdownList,
         };
     },
 };
@@ -433,7 +459,7 @@ export default {
     }
 
     button.primary {
-        margin-top: 2rem;
+        margin-top: 12rem;
         padding: 1.25rem 3rem;
         justify-content: center;
         gap: 1rem;
@@ -759,7 +785,7 @@ export default {
     }
 
     button.primary {
-        margin-top: 2rem;
+        margin-top: 16rem;
         padding: 1.25rem 3rem;
         justify-content: center;
         gap: 1rem;
@@ -1084,7 +1110,7 @@ export default {
     }
 
     button.primary {
-        margin-top: 2rem;
+        margin-top: 18rem;
         padding: 1.25rem 3rem;
         justify-content: center;
         gap: 1rem;

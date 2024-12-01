@@ -315,6 +315,7 @@ export default {
         flex: 1 0 0;
         align-self: stretch;
         color: var(--Text-Secondary, #484848);
+        max-height: 30vh;
 
         font-family: Montserrat;
         font-size: 1.125rem;

@@ -58,7 +58,10 @@
                 <button class="contact-us" @click="showModal">
                     Umów się na konsultacje
                 </button>
-                <Modal :isVisible="isModalVisible" @close="closeModal"></Modal>
+                <Modal2
+                    :isVisible="isModalVisible"
+                    @close="closeModal"
+                ></Modal2>
             </div>
             <div class="map2">
                 <iframe
@@ -80,8 +83,7 @@ import { ref } from "vue";
 import locationRed from "../icons/locationRed.vue";
 import mailRed from "../icons/mailRed.vue";
 import phoneRed from "../icons/phoneRed.vue";
-
-import Modal from "@/components/home/Modal.vue";
+import Modal2 from "./Modal2.vue";
 
 import map from "@/assets/mapka.jpg";
 export default {
@@ -90,7 +92,7 @@ export default {
         locationRed,
         mailRed,
         phoneRed,
-        Modal,
+        Modal2,
     },
     data() {
         return {

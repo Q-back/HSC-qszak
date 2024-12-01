@@ -10,21 +10,21 @@
         ></video>
 
         <div class="content">
-            <p class="text">Trenuj z nami</p>
+            <!-- <p class="text">Trenuj z nami</p> -->
             <button class="primary" @click="showModal">Zapisz się!</button>
-            <Modal :isVisible="isModalVisible" @close="closeModal"></Modal>
+            <Modal2 :isVisible="isModalVisible" @close="closeModal"></Modal2>
         </div>
     </div>
 </template>
 
 <script>
 import { ref } from "vue";
-import Modal from "@/components/home/Modal.vue";
+import Modal2 from "./Modal2.vue";
 
 export default {
     name: "VideoContent",
     components: {
-        Modal,
+        Modal2,
     },
 
     setup() {
@@ -50,7 +50,7 @@ export default {
 @media (max-width: 640px) {
     .video-container {
         position: relative;
-        width: calc(100svw - var(--scrollbarWidth));
+        width: calc(19svw - var(--scrollbarWidth));
         height: 50svh;
         padding: 10rem var(--space-200, 1rem);
         flex-direction: column;
@@ -88,7 +88,7 @@ export default {
     }
 
     button.primary {
-        margin-top: 2rem;
+        margin-top: 12rem;
         padding: 1.25rem 3rem;
         justify-content: center;
         gap: 1rem;
@@ -145,7 +145,7 @@ export default {
     }
 
     button.primary {
-        margin-top: 3rem;
+        margin-top: 18rem;
         padding: 1.25rem 3rem;
         gap: 0.625rem;
         background: var(--Surface-Brand, #e30613);

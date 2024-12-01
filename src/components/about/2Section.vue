@@ -12,7 +12,7 @@
                 pracy z ludźmi.
             </p>
         </div>
-        <img class="single" :src="Photo1" alt="Założyciele" />
+        <img class="single" src="\images\onas\szefowie.jpg" alt="Założyciele" />
     </div>
     <div class="section-2">
         <div class="section-2-text">
@@ -44,31 +44,31 @@
             <swiper
                 :grabCursor="true"
                 :centeredSlides="true"
-                :slidesPerView="2"
+                :slidesPerView="1"
                 :pagination="true"
                 :modules="modules"
                 :loop="true"
-                :spaceBetween="24"
-                :initialSlide="1"
-                :breakpoints="{
-                    1300: {
-                        slidesPerView: 3,
-                        spaceBetween: 24,
-                    },
-                }"
+                :spaceBetween="10"
+                :initialSlide="0"
                 class="swiper-dynamic"
             >
                 <swiper-slide>
-                    <img class="slide" :src="photos" alt="boys" />
+                    <img
+                        src="\images\galeria\gallery1.png"
+                        alt="Zdjęcie siłowni"
+                    />
                 </swiper-slide>
                 <swiper-slide>
-                    <img class="slide" :src="photos" alt="boys" />
+                    <img
+                        src="\images\galeria\gallery2.png"
+                        alt="Zdjęcie siłowni"
+                    />
                 </swiper-slide>
                 <swiper-slide>
-                    <img class="slide" :src="photos" alt="boys" />
-                </swiper-slide>
-                <swiper-slide>
-                    <img class="slide" :src="photos" alt="boys" />
+                    <img
+                        src="\images\galeria\gallery3.png"
+                        alt="Zdjęcie siłowni"
+                    />
                 </swiper-slide>
             </swiper>
         </div>
@@ -279,6 +279,7 @@ export default {
         color: var(--Text-Inverse-primary, #fff);
         max-width: 350px;
         margin: 2vh auto 5vh auto;
+        border-color: #e30613;
 
         font-family: Montserrat;
         font-size: 1.125rem;
@@ -467,6 +468,7 @@ export default {
         text-align: center;
         max-width: 350px;
         margin: 2vh auto 5vh auto;
+        border-color: #e30613;
 
         font-family: Montserrat;
         font-size: 1.125rem;
@@ -652,6 +654,7 @@ export default {
         text-align: center;
         max-width: 350px;
         margin: 2vh auto 5vh auto;
+        border-color: #e30613;
 
         font-family: Montserrat;
         font-size: 1.125rem;

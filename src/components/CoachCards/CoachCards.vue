@@ -14,9 +14,10 @@
                         :src="imgSrc"
                         :alt="imgAlt"
                         :style="{
-                            filter: isHovered
-                                ? 'grayscale(0%)'
-                                : 'grayscale(100%)',
+                            filter:
+                                isLargeScreen && !isHovered
+                                    ? 'grayscale(100%)'
+                                    : 'grayscale(0%)',
                             transition: 'filter 0.3s ease',
                         }"
                     />
@@ -31,7 +32,7 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import { RouterLink } from "vue-router";
 
 export default {
@@ -54,10 +55,27 @@ export default {
         },
     },
     setup() {
-        const isHovered = ref(false); // Zmienna śledząca hover
+        const isHovered = ref(false);
+        const isLargeScreen = ref(window.innerWidth > 960);
+
+        // Handler to update `isLargeScreen` on resize
+        const handleResize = () => {
+            isLargeScreen.value = window.innerWidth > 960;
+        };
+
+        onMounted(() => {
+            // Listen for resize events
+            window.addEventListener("resize", handleResize);
+        });
+
+        onBeforeUnmount(() => {
+            // Cleanup listener
+            window.removeEventListener("resize", handleResize);
+        });
 
         return {
             isHovered,
+            isLargeScreen,
         };
     },
 };

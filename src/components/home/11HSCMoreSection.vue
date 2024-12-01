@@ -403,7 +403,7 @@ import HSCMoreCard from "../OfferCards/HSCMoreCard.vue";
         align-self: stretch;
         color: var(--Text-Secondary, #484848);
         text-align: center;
-        min-height: 20vh;
+        max-height: 20vh;
 
         font-family: Montserrat;
         font-size: 1rem;

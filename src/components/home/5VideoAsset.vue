@@ -18,22 +18,37 @@ export default {
 </script>
 
 <style scoped>
-.video-container {
-    position: relative;
-    width: calc(100vw - var(--scrollbarWidth));
-    height: 60svh;
-    padding: 10rem;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.4375rem;
-    overflow: hidden;
+@media (max-width: 640px) {
+    .video-container {
+        position: relative;
+        width: calc(100vw - var(--scrollbarWidth));
+        height: 40vh;
+        overflow: hidden;
+    }
 }
+@media (min-width: 640px) and (max-width: 960px) {
+    .video-container {
+        position: relative;
+        width: calc(100vw - var(--scrollbarWidth));
+        height: 55vh;
+        overflow: hidden;
+    }
+}
+@media (min-width: 961px) {
+    .video-container {
+        position: relative;
+        width: calc(100vw - var(--scrollbarWidth));
+        height: 70vh;
+        overflow: hidden;
+    }
+}
+
 .video-asset {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%; /* Wypełnia szerokość kontenera */
+    height: 100%; /* Wypełnia wysokość kontenera */
+    object-fit: cover; /* Dopasowanie do kontenera, przycięcie nadmiaru */
 }
 </style>

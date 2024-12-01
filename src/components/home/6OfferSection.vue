@@ -30,7 +30,7 @@
                     <swiper-slide
                         v-for="(offer, index) in selectedServices"
                         :key="index"
-                        >>
+                    >
                         <OfferCard
                             :service="offer.service"
                             :subtitle="offer.subtitle"

@@ -20,7 +20,7 @@
         </div>
         <div class="hero-buttons">
             <button class="contact" @click="showModal">Napisz do nas</button>
-            <Modal :isVisible="isModalVisible" @close="closeModal"></Modal>
+            <Modal2 :isVisible="isModalVisible" @close="closeModal"></Modal2>
             <RouterLink to="/oferta" class="offer"
                 >Przeglądaj ofertę</RouterLink
             >
@@ -30,12 +30,12 @@
 
 <script>
 import { ref, onMounted, onUnmounted } from "vue";
-import Modal from "@/components/home/Modal.vue";
+import Modal2 from "./Modal2.vue";
 
 export default {
     name: "HeroContent",
     components: {
-        Modal,
+        Modal2,
     },
 
     setup() {

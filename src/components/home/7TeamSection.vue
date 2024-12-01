@@ -17,13 +17,18 @@
                 <swiper
                     :grabCursor="true"
                     :centeredSlides="true"
-                    :slidesPerView="2"
+                    :slidesPerView="1"
                     :pagination="true"
                     :modules="modules"
                     :loop="true"
-                    :spaceBetween="304"
+                    :spaceBetween="auto"
                     :initialSlide="0"
                     class="swiper-dynamic"
+                    :breakpoints="{
+                        740: {
+                            slidesPerView: 2,
+                        },
+                    }"
                 >
                     <swiper-slide
                         v-for="(coach, index) in selectedCoaches"
@@ -60,9 +65,8 @@
 <script>
 import { RouterLink } from "vue-router";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import CoachCards from "../CoachCards/CoachCards.vue";
 import { coachData } from "@/data/coachData";
@@ -84,13 +88,12 @@ export default {
             "Sandra Cieślik-Kulej",
         ];
 
-        // Filtrowanie trenerów na podstawie wybranych nazw
         const selectedCoaches = coachData.filter((coach) =>
             selectedCoachNames.includes(coach.name)
         );
 
         return {
-            modules: [EffectCoverflow, Pagination],
+            modules: [Pagination],
             selectedCoaches,
         };
     },
@@ -175,6 +178,7 @@ export default {
         background: var(--Surface-Brand, #e30613);
         color: var(--Text-Inverse-primary, #fff);
         text-align: center;
+        border-color: #e30613;
 
         font-family: Montserrat;
         font-size: 1.125rem;
@@ -187,6 +191,7 @@ export default {
 
     .swiper-dynamic {
         display: block;
+        overflow: hidden;
     }
 
     .swiper-slide {
@@ -282,6 +287,7 @@ export default {
         background: var(--Surface-Brand, #e30613);
         color: var(--Text-Inverse-primary, #fff);
         text-align: center;
+        border-color: #e30613;
 
         font-family: Montserrat;
         font-size: 1.125rem;
@@ -294,6 +300,7 @@ export default {
 
     .swiper-dynamic {
         display: block;
+        overflow: hidden;
     }
 
     .swiper-slide {
@@ -392,6 +399,7 @@ export default {
         background: var(--Surface-Brand, #e30613);
         color: var(--Text-Inverse-primary, #fff);
         text-align: center;
+        border-color: #e30613;
 
         font-family: Montserrat;
         font-size: 1.125rem;

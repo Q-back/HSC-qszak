@@ -3,37 +3,22 @@
         <swiper
             :grabCursor="true"
             :centeredSlides="true"
-            :slidesPerView="2"
+            :slidesPerView="1"
             :pagination="true"
             :modules="modules"
             :loop="true"
-            :spaceBetween="324"
-            :initialSlide="1"
-            :breakpoints="{
-                1300: {
-                    slidesPerView: 2,
-                    coverflowEffect: {
-                        rotate: 0,
-                        stretch: -30,
-                        depth: 100,
-                        modifier: 1,
-                        slideShadows: false,
-                    },
-                },
-            }"
+            :spaceBetween="auto"
+            :initialSlide="0"
             class="swiper-dynamic"
         >
             <swiper-slide>
-                <img :src="photo" alt="boys" />
+                <img src="\images\galeria\gallery1.png" alt="Zdjęcie siłowni" />
             </swiper-slide>
             <swiper-slide>
-                <img :src="photo" alt="boys" />
+                <img src="\images\galeria\gallery2.png" alt="Zdjęcie siłowni" />
             </swiper-slide>
             <swiper-slide>
-                <img :src="photo" alt="boys" />
-            </swiper-slide>
-            <swiper-slide>
-                <img :src="photo" alt="boys" />
+                <img src="\images\galeria\gallery3.png" alt="Zdjęcie siłowni" />
             </swiper-slide>
         </swiper>
     </div>
@@ -41,11 +26,9 @@
 
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import photo from "@/assets/gym-photo.jpg";
 
 export default {
     name: "ImageGallery",
@@ -53,14 +36,10 @@ export default {
         Swiper,
         SwiperSlide,
     },
-    data() {
-        return {
-            photo,
-        };
-    },
+
     setup() {
         return {
-            modules: [EffectCoverflow, Pagination],
+            modules: [Pagination],
         };
     },
 };
@@ -71,22 +50,20 @@ export default {
     width: calc(100svw - var(--scrollbarWidth));
     display: flex;
     align-items: center;
-    gap: var(--space-100, 0.5rem);
+    gap: var(--space-100, 2rem);
 }
 img {
-    max-width: 80vw;
-    max-height: 80vh;
+    max-width: 80%;
+    max-height: 80%;
     object-fit: contain;
 }
 
 .swiper-slide {
+    display: flex;
     align-self: flex-start;
     justify-self: flex-start;
     text-align: center;
-    font-size: 18px;
 
-    /* Center slide text vertically */
-    display: flex;
     justify-content: center;
     align-items: center;
 }

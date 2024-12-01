@@ -5,7 +5,7 @@
             <img :src="photoSrc" :alt="alt" />
         </div>
         <div class="card-info">{{ info }}</div>
-        <RouterLink :to="link" class="read-more">Szczegóły usługi</RouterLink>
+        <RouterLink :to="link" class="read-more">Szczegóły</RouterLink>
     </div>
 </template>
 
@@ -195,7 +195,7 @@ const props = defineProps({
         align-self: stretch;
         color: var(--Text-Secondary, #484848);
         text-align: center;
-        min-height: 35vh;
+        min-height: 25vh;
 
         font-family: Montserrat;
         font-size: 1rem;

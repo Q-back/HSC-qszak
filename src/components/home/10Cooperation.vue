@@ -127,8 +127,8 @@ export default {
     align-items: center;
 }
 
-.logo {
-    width: 180px; /* Dostosuj szerokość logo */
+/* .logo {
+    width: 180px;
     height: 500px;
     padding: 10px;
     transition: transform 0.3s ease;
@@ -145,7 +145,7 @@ export default {
 .logo:hover img {
     filter: grayscale(0);
     transform: scale(1.1);
-}
+} */
 
 @media (max-width: 640px) {
     section.cooperations {
@@ -184,13 +184,17 @@ export default {
     }
 
     .img-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         height: 100%;
+        object-fit: contain;
     }
 
     img {
-        max-width: 100%;
-        max-height: 100%;
+        max-width: 90%;
+        max-height: 90%;
     }
 }
 
@@ -230,12 +234,16 @@ export default {
         height: 11rem;
     }
     .img-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         height: 100%;
+        object-fit: contain;
     }
     img {
-        max-width: 80%;
-        max-height: 80%;
+        max-width: 70%;
+        max-height: 70%;
     }
 }
 
@@ -270,19 +278,34 @@ export default {
         gap: 4rem;
         align-self: stretch;
     }
+
+    .img-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
     .logo {
         width: 12rem;
         height: 12rem;
-    }
-
-    .img-box {
-        width: 100%;
-        height: 100%;
+        padding: 10px;
+        transition: transform 0.3s ease;
     }
 
     .logo img {
-        max-width: 80%;
-        max-height: 80%;
+        max-width: 60%;
+        max-height: 60%;
+
+        filter: grayscale(100%);
+        transition: filter 0.3s ease, transform 0.3s ease;
+    }
+
+    .logo:hover img {
+        filter: grayscale(0);
+        transform: scale(1.1);
     }
 }
 </style>

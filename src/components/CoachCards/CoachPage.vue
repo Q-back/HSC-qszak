@@ -27,7 +27,12 @@
     </div>
     <div class="coach-section-offer">
         <div class="coach-section-offer-header">
-            <p class="offer-header-text">Oferowane usługi</p>
+            <p
+                class="offer-header-text"
+                :class="{ hidden: ['ŁS1', 'NZ1'].includes(coach?.id) }"
+            >
+                Oferowane usługi
+            </p>
         </div>
         <div class="offer-slider">
             <div v-for="(offer, index) in filteredOffers" :key="index">
@@ -82,6 +87,9 @@ export default {
 </script>
 
 <style scoped>
+.hidden {
+    display: none;
+}
 @media (max-width: 640px) {
     .coach-promo {
         display: flex;

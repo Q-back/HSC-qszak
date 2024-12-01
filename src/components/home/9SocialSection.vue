@@ -16,66 +16,38 @@
         </div>
 
         <div class="gallery">
-            <swiper
-                :grabCursor="true"
-                :centeredSlides="true"
-                :slidesPerView="2"
-                :pagination="true"
-                :modules="modules"
-                :loop="true"
-                :spaceBetween="354"
-                :initialSlide="1"
-                :breakpoints="{
-                    960: {
-                        slidesPerView: 3,
-                        coverflowEffect: {
-                            rotate: 0,
-                            stretch: -30,
-                            depth: 100,
-                            modifier: 1,
-                            slideShadows: false,
-                        },
-                    },
-                }"
-                class="swiper-dynamic"
-            >
-                <swiper-slide>
-                    <img :src="pic" alt="ziomki" />
-                </swiper-slide>
-                <swiper-slide> <img :src="pic" alt="ziomki" />> </swiper-slide>
-                <swiper-slide>
-                    <img :src="pic" alt="ziomki" />
-                </swiper-slide>
-                <swiper-slide>
-                    <img :src="pic" alt="ziomki" />
-                </swiper-slide>
-            </swiper>
+            <div class="box"><instagram1 /></div>
+            <div class="box"><instagram2 /></div>
+            <div class="box"><instagram3 /></div>
+            <div class="box"><instagram4 /></div>
         </div>
     </section>
 </template>
 
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import pic from "@/assets/ziomeczki.jpeg";
+import instagram1 from "../instagram/instagram1.vue";
+import instagram2 from "../instagram/instagram2.vue";
+import instagram3 from "../instagram/instagram3.vue";
+import instagram4 from "../instagram/instagram4.vue";
 
 export default {
     name: "SocialSection",
     components: {
         Swiper,
         SwiperSlide,
+        instagram1,
+        instagram2,
+        instagram3,
+        instagram4,
     },
-    data() {
-        return {
-            pic,
-        };
-    },
+
     setup() {
         return {
-            modules: [EffectCoverflow, Pagination],
+            modules: [Pagination],
         };
     },
 };
@@ -143,28 +115,23 @@ export default {
     }
     .gallery {
         display: flex;
-        align-items: flex-start;
-        align-content: flex-start;
+        align-items: center;
+        align-content: center;
         gap: 1rem var(--space-200, 1rem);
-        align-self: stretch;
+        align-self: center;
         flex-wrap: wrap;
     }
 
-    img {
-        display: flex;
-        max-width: 80vw;
-        max-height: 80vh;
-        object-fit: contain;
+    .box {
+        margin: 0 auto;
     }
 
     .swiper-slide {
+        display: flex;
         align-self: flex-start;
         justify-self: flex-start;
         text-align: center;
-        font-size: 18px;
 
-        /* Center slide text vertically */
-        display: flex;
         justify-content: center;
         align-items: center;
     }
@@ -236,26 +203,22 @@ export default {
 
     .gallery {
         display: flex;
-        align-items: flex-start;
-        align-content: flex-start;
+        align-items: center;
+        align-content: center;
         gap: 1rem var(--space-200, 1rem);
-        align-self: stretch;
+        /* align-self: stretch; */
         flex-wrap: wrap;
     }
-    img {
-        max-width: 80vw;
-        max-height: 80vh;
-        object-fit: contain;
+    .box {
+        margin: 0 auto;
     }
 
     .swiper-slide {
+        display: flex;
         align-self: flex-start;
         justify-self: flex-start;
         text-align: center;
-        font-size: 18px;
 
-        /* Center slide text vertically */
-        display: flex;
         justify-content: center;
         align-items: center;
     }
@@ -324,21 +287,15 @@ export default {
         justify-content: center;
         gap: 2rem;
         align-self: stretch;
-    }
-    img {
-        max-width: 80vw;
-        max-height: 80vh;
-        object-fit: contain;
+        flex-wrap: wrap;
     }
 
     .swiper-slide {
+        display: flex;
         align-self: flex-start;
         justify-self: flex-start;
         text-align: center;
-        font-size: 18px;
 
-        /* Center slide text vertically */
-        display: flex;
         justify-content: center;
         align-items: center;
     }

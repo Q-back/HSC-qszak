@@ -13,7 +13,7 @@ export const coachData = [
         id: "JK1",
         name: "Jakub Kulej",
         position: "Trener Personalny",
-        skills: "personal, combat",
+        skills: "personal, combat, motor",
         imgSrc: "/images/kadra/JakubKulej.png",
         imgAlt: "Zdjęcie Jakuba Kuleja",
         description:
@@ -176,7 +176,8 @@ export const coachData = [
         skills: "combat",
         imgSrc: "/images/kadra/VladyslavFilenko.png",
         imgAlt: "Zdjęcie Vladyslava Filenko",
-        description: "",
+        description:
+            "Nazywam się Vladyslav Filenko, ze sportem jestem związany od samego dzieciństwa, swoją przygodę ze sztukami walki zaczynałem od MMA. Jestem wielokrotnym zwycięzcą zawodów z MMA, sambo, BJJ na Ukrainie. Na dzień dzisiejszy jestem zawodnikiem z brazylijskiego jiu-jitsu, mam purpurowy pas, regularnie startuję na zawodach i cały czas trenuje, na treningu poświęcam 99% wolnego czasu.\nOstatnie wyniki które udało mi się osiągnąć w brazylijskim jiu jitsu to: Wicemistrz Słowacji ADCC PRO, Mistrz Czech ADCC PRO, Wicemistrz Polski SOLT PRO.\nJedną z głównych zasad którą stosuje w swoich treningach i treningach które prowadzę, to stabilny rozwój, a nie stanie na jednym miejscu!\nZapraszam serdecznie na trening grupowe lub personalne.\nМене звати Владислав Філенко, зі спортом звʼязаний від самого дитинства, свій шлях в бойових мистецтвах починав від ММА. Я багаторазовий чемпіон і призер чемпіонатів області та України з різних дисциплін, таких як: «ММА, самбо, БЖЖ, рукопашний бій». На сьогоднішній день, займаюсь бразильським джиу-джитсу, регулярно їжджу на змагання, маю фіолетовий пояс з бразильського джиу-джитсу, 99% вільного часу я приділяю тренуванням і розвитку. Ось останні результати, які мені вдалось досягти: Віце-чемпіон Словаччини ADCC PRO, Чемпіон Чехії ADCC PRO, Віце-чемпіон Польщі SOLT PRO.\nОдне з головних правил, на моїх тренуваннях - це постійний розвиток, як на особистих тренування, так і ролі тренера, щоб не стояти на одному місці, а йти з тенденціями цього спорту вперед!\nЗапрошую Всіх на групові або персональні тренування.",
     },
     {
         id: "ŁS1",
@@ -197,5 +198,25 @@ export const coachData = [
         imgAlt: "Zdjęcie Natalii Zieniewicz",
         description:
             "Psycholog, psychodietetyk oraz certyfikowana hipnoterapeutka. Jej podejście łączy psychologię, dietetykę i hipnoterapię, co pozwala kompleksowo, szybko i skutecznie pomagać pacjentom w osiąganiu celów i pokonywaniu przeszkód. Swoje doświadczenie zawodowe zdobywała w szpitalu psychiatrycznym, ośrodku leczenia zaburzeń odżywiania, poradniach psychologicznych oraz stowarzyszeniach pomagających osobom w kryzysie zdrowia psychicznego. Jeżeli mierzysz się z emocjonalnym jedzeniem, nie możesz schudnąć mimo diety i treningów, cierpisz na zaburzenia lękowe, fobie, bezsenność, mierzysz się z nałogiem, chcesz pozbyć się ograniczających przekonań, lub wręcz przeciwnie - poprawić swoje osiągnięcia i skutecznie się zmotywować, zapraszamy na sesje indywidualne.",
+    },
+    {
+        id: "JK2",
+        name: "Joanna Kapelańczyk",
+        position: "Trener Personalny",
+        skills: "personal, medical",
+        imgSrc: "/images/kadra/JoannaKapelańczyk.jpg",
+        imgAlt: "Zdjęcie Joanny Kapelańczyk",
+        description:
+            "Trenerka personalna z ponad 7 letnim doświadczeniem. Ukończyła studia magisterskie z fizjoterapii na AWF we Wrocławiu oraz liczne szkolenia z zakresu treningu i fizjoterapii. Specjalizuje się w treningu funkcjonalnym, medycznym i siłowym. Zajmuje się treningiem osób z dolegliwościami bólowymi, kobiet w ciąży, po porodzie oraz z problemami uroginekologicznymi.\nW pracy z podopiecznymi stawia przede wszystkim na indywidualne podejście do każdej osoby oraz naukę poprawnego wykonywania ćwiczeń. Z Asią poczujesz się pewnie na siłowni i poznasz szeroki wachlarz ćwiczeń. Pomaga w odzyskaniu silnego i sprawnego ciała.\nJej pasją jest trening siłowy i siatkówka, a w przeszłości startowała w trójboju siłowym zdobywając brązowy medal Mistrzostw Polski w wyciskaniu leżąc klasycznym. Prywatnie miłośniczka i posiadaczka dwóch kotów.",
+    },
+    {
+        id: "MW2",
+        name: "Maciej Weszka",
+        position: "Trener Personalny",
+        skills: "personal, motor",
+        imgSrc: "/images/kadra/MaciejWeszka.jpg",
+        imgAlt: "Zdjęcie Macieja Weszki",
+        description:
+            "Trener personalny oraz trener przygotowania motorycznego z 8 letnim doświadczeniem. Ukończył wrocławski AWF i liczne szkolenia z zakresu treningu siłowego oraz funkcjonalnego. Specjalizuje się w trójboju i dwuboju olimpijskim. W pracy z klientem stawia przede wszystkim na wszechstronny rozwój fizyczny. To trener, dla którego siłownia i trenowanie innych stanowi małą odskocznię i formę odpoczynku od jego drugiej pracy.\nBranża twórcza pozwala mu łączyć pasję do aktywności fizycznej z kreatywnym podejściem do obrazu. Jako filmowiec i fotograf zbiera doświadczenie zarówno w świecie sportu, jak i za kamerą. Daje mu to wyjątkową perspektywę w pracy z klientami a indywidualne podejście oraz zaangażowanie sprawiają, że pomaga im nie tylko poprawiać formę, ale także budować pewność siebie i osiągać wyznaczone cele.",
     },
 ];

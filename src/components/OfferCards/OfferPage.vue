@@ -49,11 +49,16 @@
                     <div class="users-text">{{ trainingData.users }}</div>
                 </div>
                 <img
-                    class="img-users"
+                    :class="{
+                        'img-users':
+                            trainingData.imgSrc3 && trainingData.imgAlt3,
+                    }"
+                    v-if="trainingData.imgSrc3 && trainingData.imgAlt3"
                     :src="trainingData.imgSrc3"
                     :alt="trainingData.imgAlt3"
                 />
             </div>
+            <div class="class-coach">Prowadzący</div>
             <div class="team-slider">
                 <CoachCards
                     v-for="item in coachCardData"
@@ -84,14 +89,14 @@
                     playsinline
                 ></video>
                 <div class="content">
-                    <p class="text">Trenuj z nami</p>
+                    <!-- <p class="text">Trenuj z nami</p> -->
                     <button class="primary" @click="showModal">
                         Zapisz się!
                     </button>
-                    <Modal
+                    <Modal2
                         :isVisible="isModalVisible"
                         @close="closeModal"
-                    ></Modal>
+                    ></Modal2>
                 </div>
             </div>
         </div>
@@ -101,7 +106,7 @@
 
 <script>
 import { computed, ref } from "vue";
-import Modal from "../home/Modal.vue";
+import Modal2 from "../home/Modal2.vue";
 import Footer from "../home/15Footer.vue";
 import { offerData } from "@/data/offerData";
 import TimetableBox from "./TimetableBox.vue";
@@ -111,7 +116,7 @@ import { coachData } from "@/data/coachData";
 export default {
     name: "OfferPage",
     components: {
-        Modal,
+        Modal2,
         Footer,
         TimetableBox,
         CoachCards,
@@ -191,6 +196,7 @@ export default {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        overflow: hidden;
     }
 
     .offer-promo {
@@ -340,10 +346,22 @@ export default {
     .img-users {
         height: 12rem;
         align-self: stretch;
-        background: lightgray 50% / cover no-repeat;
-        margin-bottom: 10vh;
+        /* background: lightgray 50% / cover no-repeat; */
     }
 
+    .class-coach {
+        width: 90%;
+        color: #000;
+        font-family: "Montserrat";
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3rem;
+        letter-spacing: 0.04rem;
+        text-transform: uppercase;
+        margin-bottom: 5rem;
+        margin-top: 10vh;
+    }
     .team-slider {
         display: flex;
         width: 100%;
@@ -405,7 +423,7 @@ export default {
     }
 
     button.primary {
-        margin-top: 2rem;
+        margin-top: 14rem;
         padding: 1.25rem 3rem;
         justify-content: center;
         gap: 1rem;
@@ -583,9 +601,21 @@ export default {
     .img-users {
         height: 27.75rem;
         align-self: stretch;
-        background: lightgray 50% / cover no-repeat;
+        /* background: lightgray 50% / cover no-repeat; */
     }
 
+    .class-coach {
+        width: 90%;
+        color: #000;
+        font-family: "Montserrat";
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3rem;
+        letter-spacing: 0.04rem;
+        text-transform: uppercase;
+        margin-bottom: 5rem;
+    }
     .team-slider {
         display: flex;
         width: 100%;
@@ -647,7 +677,7 @@ export default {
     }
 
     button.primary {
-        margin-top: 2rem;
+        margin-top: 16rem;
         padding: 1.25rem 3rem;
         justify-content: center;
         gap: 1rem;
@@ -822,7 +852,19 @@ export default {
     .img-users {
         height: 27.75rem;
         align-self: stretch;
-        background: lightgray 50% / cover no-repeat;
+        /* background: lightgray 50% / cover no-repeat; */
+    }
+    .class-coach {
+        width: 90%;
+        color: #000;
+        font-family: "Montserrat";
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3rem;
+        letter-spacing: 0.04rem;
+        text-transform: uppercase;
+        margin-bottom: 5rem;
     }
 
     .team-slider {
@@ -884,7 +926,7 @@ export default {
     }
 
     button.primary {
-        margin-top: 2rem;
+        margin-top: 18rem;
         padding: 1.25rem 3rem;
         justify-content: center;
         gap: 1rem;
