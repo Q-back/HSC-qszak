@@ -243,6 +243,7 @@ export default {
         line-height: 1.5rem;
         letter-spacing: -0.005rem;
         text-decoration: none;
+        word-break: break-all;
     }
 
     p.copy {

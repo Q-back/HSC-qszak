@@ -423,7 +423,8 @@ export default {
     }
 
     button.primary {
-        margin-top: 14rem;
+        position: relative;
+        top: 15vh;
         padding: 1.25rem 3rem;
         justify-content: center;
         gap: 1rem;
@@ -677,7 +678,8 @@ export default {
     }
 
     button.primary {
-        margin-top: 16rem;
+        position: relative;
+        top: 15vh;
         padding: 1.25rem 3rem;
         justify-content: center;
         gap: 1rem;
@@ -836,6 +838,7 @@ export default {
 
     .img-description {
         height: 27.75rem;
+        max-width: 60vw;
         align-self: stretch;
         background: lightgray 50% / cover no-repeat;
     }
@@ -851,6 +854,7 @@ export default {
 
     .img-users {
         height: 27.75rem;
+        max-width: 60vw;
         align-self: stretch;
         /* background: lightgray 50% / cover no-repeat; */
     }
@@ -889,11 +893,12 @@ export default {
     .video-container {
         position: relative;
         width: 100%;
-        height: 50vh;
+        height: 60vh;
         padding: 0rem var(--space-200, 1rem);
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: #181818;
     }
 
     .video-player {
@@ -903,7 +908,7 @@ export default {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        z-index: -1;
+        z-index: 0;
     }
 
     .content {
@@ -926,7 +931,8 @@ export default {
     }
 
     button.primary {
-        margin-top: 18rem;
+        position: relative;
+        top: 20vh;
         padding: 1.25rem 3rem;
         justify-content: center;
         gap: 1rem;

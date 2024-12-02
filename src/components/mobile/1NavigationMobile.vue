@@ -6,7 +6,10 @@
         <div class="Content">
             <div class="Menu">
                 <button class="contact" @click="showModal">Kontakt</button>
-                <Modal :isVisible="isModalVisible" @close="closeModal"></Modal>
+                <Modal2
+                    :isVisible="isModalVisible"
+                    @close="closeModal"
+                ></Modal2>
                 <div class="menu-icon" @click="toggleMenu">
                     <div v-if="!isMenuOpen" class="hamburger">
                         <MenuIcon />
@@ -113,7 +116,7 @@ import MenuIcon from "@/components/icons/menu.vue";
 import CloseIcon from "@/components/icons/closeIcon.vue";
 import { RouterLink } from "vue-router";
 import ChevronDown from "../icons/ChevronDown.vue";
-import Modal from "../home/Modal.vue";
+import Modal2 from "@/components/home/Modal2.vue";
 
 export default {
     name: "NavigationMobile",
@@ -125,7 +128,7 @@ export default {
         CloseIcon,
         RouterLink,
         ChevronDown,
-        Modal,
+        Modal2,
     },
     setup() {
         const isModalVisible = ref(false);

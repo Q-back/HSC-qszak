@@ -68,7 +68,7 @@ export default {
 </script>
 
 <style scoped>
-.myswiper {
+.mySwiper {
     max-width: 90vw;
     display: flex;
     align-items: center;

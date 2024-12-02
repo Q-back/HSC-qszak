@@ -36,7 +36,7 @@ export default {
 </script>
 
 <style scoped>
-@media (max-width: 480px) {
+@media (max-width: 640px) {
     .promo-content {
         display: flex;
         width: calc(100svw - var(--scrollbarWidth));
@@ -76,8 +76,9 @@ export default {
         justify-content: center;
         align-items: center;
         gap: var(--space-200, 1rem);
-        align-self: stretch;
+        /* align-self: stretch; */
         background: var(--Surface-Brand, #e30613);
+        border-color: #e30613;
 
         color: var(--Text-Inverse-primary, #fff);
         text-align: center;
@@ -92,7 +93,7 @@ export default {
     }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 640px) {
     .promo-content {
         display: flex;
         width: calc(100svw - var(--scrollbarWidth));
@@ -134,6 +135,7 @@ export default {
         color: var(--Text-Inverse-primary, #fff);
         text-align: center;
         background: var(--Surface-Brand, #e30613);
+        border-color: #e30613;
 
         /* Action/Large/Bold */
         font-family: Montserrat;

@@ -48,7 +48,7 @@
                 :pagination="true"
                 :modules="modules"
                 :loop="true"
-                :spaceBetween="10"
+                :spaceBetween="300"
                 :initialSlide="0"
                 class="swiper-dynamic"
             >
@@ -274,10 +274,10 @@ export default {
         justify-content: center;
         align-items: center;
         gap: 1rem;
-        align-self: stretch;
+        /* align-self: stretch; */
         background: var(--Surface-Brand, #e30613);
         color: var(--Text-Inverse-primary, #fff);
-        max-width: 350px;
+        max-width: 320px;
         margin: 2vh auto 5vh auto;
         border-color: #e30613;
 
@@ -303,19 +303,19 @@ export default {
         max-width: 100%;
     }
 
-    img.slide {
-        width: 100%;
+    img {
+        max-width: 90%;
+        max-height: 90%;
         object-fit: contain;
     }
 
     .swiper-slide {
-        /* align-self: flex-start;
+        align-self: flex-start;
         justify-self: flex-start;
-        text-align: center; */
+        text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: auto;
     }
     .slider-team {
         display: block;
@@ -486,7 +486,7 @@ export default {
         gap: var(--space-300, 1.5rem);
     }
 
-    img.slide {
+    img {
         max-width: 100%;
         max-height: 100%;
         object-fit: contain;
@@ -672,7 +672,7 @@ export default {
         gap: var(--space-300, 1.5rem);
     }
 
-    img.slide {
+    img {
         max-width: 100%;
         max-height: 100%;
         object-fit: contain;

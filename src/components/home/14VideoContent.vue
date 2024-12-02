@@ -88,7 +88,8 @@ export default {
     }
 
     button.primary {
-        margin-top: 12rem;
+        position: relative;
+        top: 15vh;
         padding: 1.25rem 3rem;
         justify-content: center;
         gap: 1rem;
@@ -110,11 +111,12 @@ export default {
     .video-container {
         position: relative;
         width: calc(100svw - var(--scrollbarWidth));
-        height: 60svh;
+        height: 60vh;
         padding: 10rem var(--space-200, 1rem);
         flex-direction: column;
         align-items: center;
         gap: var(--space-300, 1.5rem);
+        background-color: #181818;
     }
     .video-player {
         position: absolute;
@@ -123,7 +125,7 @@ export default {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        z-index: -1;
+        z-index: 0;
     }
 
     .content {
@@ -145,7 +147,8 @@ export default {
     }
 
     button.primary {
-        margin-top: 18rem;
+        position: relative;
+        top: 25vh;
         padding: 1.25rem 3rem;
         gap: 0.625rem;
         background: var(--Surface-Brand, #e30613);
