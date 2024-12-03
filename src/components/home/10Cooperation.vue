@@ -159,9 +159,8 @@ export default {
     }
     .claim {
         align-self: stretch;
-        color: var(--Text-Background-text-inverse, #313131);
+        color: var(--Text-Inverse-primary, #fff);
         text-align: center;
-
         font-family: Montserrat;
         font-size: 2rem;
         font-style: normal;
@@ -169,6 +168,7 @@ export default {
         line-height: 3rem;
         letter-spacing: 0.04rem;
         text-transform: uppercase;
+        opacity: 0.65;
     }
     .brands {
         display: flex;
@@ -211,8 +211,7 @@ export default {
     .claim {
         align-self: stretch;
         text-align: center;
-
-        color: var(--Text-Background-text-inverse, #313131);
+        color: var(--Text-Inverse-primary, #fff);
         font-family: Montserrat;
         font-size: 2rem;
         font-style: normal;
@@ -220,6 +219,7 @@ export default {
         line-height: 3rem;
         letter-spacing: 0.04rem;
         text-transform: uppercase;
+        opacity: 0.65;
     }
     .brands {
         display: flex;
@@ -260,8 +260,7 @@ export default {
     .claim {
         align-self: stretch;
         text-align: center;
-
-        color: var(--Text-Background-text-inverse, #313131);
+        color: var(--Text-Inverse-primary, #fff);
         font-family: Montserrat;
         font-size: 4rem;
         font-style: normal;
@@ -269,6 +268,7 @@ export default {
         line-height: 4rem;
         letter-spacing: 0.04rem;
         text-transform: uppercase;
+        opacity: 0.65;
     }
     .brands {
         display: flex;

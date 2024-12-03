@@ -58,9 +58,7 @@ export default {
     .claim {
         align-self: stretch;
         text-align: center;
-
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: #fff;
+        color: var(--Text-Inverse-primary, #fff);
         font-family: Montserrat;
         font-size: 1.5rem;
         font-style: normal;
@@ -126,8 +124,7 @@ export default {
     .claim {
         align-self: stretch;
         text-align: center;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: #fff;
+        color: var(--Text-Inverse-primary, #fff);
         font-family: Montserrat;
         font-size: 2rem;
         font-style: normal;
@@ -192,9 +189,7 @@ export default {
     .claim {
         align-self: stretch;
         text-align: center;
-
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: #fff;
+        color: var(--Text-Inverse-primary, #fff);
         font-family: Montserrat;
         font-size: 2rem;
         font-style: normal;

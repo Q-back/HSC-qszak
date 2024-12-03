@@ -204,7 +204,7 @@ export const coachData = [
         name: "Joanna Kapelańczyk",
         position: "Trener Personalny",
         skills: "personal, medical",
-        imgSrc: "/images/kadra/JoannaKapelańczyk.jpg",
+        imgSrc: "/images/kadra/JoannaKapelańczyk.png",
         imgAlt: "Zdjęcie Joanny Kapelańczyk",
         description:
             "Trenerka personalna z ponad 7 letnim doświadczeniem. Ukończyła studia magisterskie z fizjoterapii na AWF we Wrocławiu oraz liczne szkolenia z zakresu treningu i fizjoterapii. Specjalizuje się w treningu funkcjonalnym, medycznym i siłowym. Zajmuje się treningiem osób z dolegliwościami bólowymi, kobiet w ciąży, po porodzie oraz z problemami uroginekologicznymi.\nW pracy z podopiecznymi stawia przede wszystkim na indywidualne podejście do każdej osoby oraz naukę poprawnego wykonywania ćwiczeń. Z Asią poczujesz się pewnie na siłowni i poznasz szeroki wachlarz ćwiczeń. Pomaga w odzyskaniu silnego i sprawnego ciała.\nJej pasją jest trening siłowy i siatkówka, a w przeszłości startowała w trójboju siłowym zdobywając brązowy medal Mistrzostw Polski w wyciskaniu leżąc klasycznym. Prywatnie miłośniczka i posiadaczka dwóch kotów.",
@@ -214,7 +214,7 @@ export const coachData = [
         name: "Maciej Weszka",
         position: "Trener Personalny",
         skills: "personal, motor",
-        imgSrc: "/images/kadra/MaciejWeszka.jpg",
+        imgSrc: "/images/kadra/MaciejWeszka.png",
         imgAlt: "Zdjęcie Macieja Weszki",
         description:
             "Trener personalny oraz trener przygotowania motorycznego z 8 letnim doświadczeniem. Ukończył wrocławski AWF i liczne szkolenia z zakresu treningu siłowego oraz funkcjonalnego. Specjalizuje się w trójboju i dwuboju olimpijskim. W pracy z klientem stawia przede wszystkim na wszechstronny rozwój fizyczny. To trener, dla którego siłownia i trenowanie innych stanowi małą odskocznię i formę odpoczynku od jego drugiej pracy.\nBranża twórcza pozwala mu łączyć pasję do aktywności fizycznej z kreatywnym podejściem do obrazu. Jako filmowiec i fotograf zbiera doświadczenie zarówno w świecie sportu, jak i za kamerą. Daje mu to wyjątkową perspektywę w pracy z klientami a indywidualne podejście oraz zaangażowanie sprawiają, że pomaga im nie tylko poprawiać formę, ale także budować pewność siebie i osiągać wyznaczone cele.",

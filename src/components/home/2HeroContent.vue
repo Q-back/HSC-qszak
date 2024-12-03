@@ -161,19 +161,14 @@ export default {
     }
 
     .hero-text-bottom-slider {
-        /* Headings/Mobile/XXL */
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: var(--Border-Secondary, #fff);
+        color: var(--Text-Inverse-primary, #fff);
         font-family: "Montserrat";
         font-size: 2.5rem;
         font-style: normal;
         font-weight: 700;
-        line-height: 3.375rem; /* 135% */
+        line-height: 3.375rem;
         letter-spacing: 0.05rem;
         text-transform: uppercase;
-        color: transparent;
-        white-space: nowrap;
-        text-overflow: ellipsis;
     }
 
     .hero-buttons {
@@ -231,7 +226,7 @@ export default {
     }
 
     .hero-text-bottom-slider {
-        opacity: 1;
+        opacity: 0.65;
         transition: opacity 0.5s ease-in-out; /* Przejście płynne przez 0.5 sekundy */
     }
 
@@ -291,8 +286,7 @@ export default {
     }
 
     .hero-text-bottom-slider {
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: var(--Border-Secondary, #fff);
+        color: var(--Text-Inverse-primary, #fff);
         font-family: "Montserrat";
         font-size: 4rem;
         font-style: normal;
@@ -300,9 +294,6 @@ export default {
         line-height: 6rem; /* 150% */
         letter-spacing: 0.08rem;
         text-transform: uppercase;
-        color: transparent;
-        white-space: nowrap;
-        text-overflow: ellipsis;
     }
 
     .hero-buttons {
@@ -364,7 +355,7 @@ export default {
     }
 
     .hero-text-bottom-slider {
-        opacity: 1;
+        opacity: 0.65;
         transition: opacity 0.5s ease-in-out; /* Przejście płynne przez 0.5 sekundy */
     }
 
@@ -422,8 +413,7 @@ export default {
     }
 
     .hero-text-bottom-slider {
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: var(--Border-Secondary, #f5f5f5);
+        color: var(--Text-Inverse-primary, #fff);
         font-family: "Montserrat";
         font-size: 4rem;
         font-style: normal;
@@ -431,7 +421,6 @@ export default {
         line-height: 6rem;
         letter-spacing: 0.08rem;
         text-transform: uppercase;
-        color: transparent;
     }
 
     .hero-buttons {
@@ -493,7 +482,7 @@ export default {
     }
 
     .hero-text-bottom-slider {
-        opacity: 1;
+        opacity: 0.65;
         transition: opacity 0.5s ease-in-out; /* Przejście płynne przez 0.5 sekundy */
     }
 

@@ -69,7 +69,7 @@ import HSCMoreCard from "../OfferCards/HSCMoreCard.vue";
     }
     .promo-text {
         align-self: stretch;
-        color: var(--Text-Background-text, #f5f5f5);
+        color: var(--Text-Primary, #181818);
         text-align: center;
         font-family: Montserrat;
         font-size: 4rem;
@@ -78,6 +78,7 @@ import HSCMoreCard from "../OfferCards/HSCMoreCard.vue";
         line-height: 4rem; /* 100% */
         letter-spacing: 0.08rem;
         text-transform: uppercase;
+        opacity: 0.08;
     }
     .title {
         align-self: stretch;
@@ -201,7 +202,7 @@ import HSCMoreCard from "../OfferCards/HSCMoreCard.vue";
     .promo-text {
         align-self: stretch;
         text-align: center;
-        color: var(--Text-Background-text, #f5f5f5);
+        color: var(--Text-Primary, #181818);
         text-align: center;
         font-family: Montserrat;
         font-size: 4rem;
@@ -210,6 +211,7 @@ import HSCMoreCard from "../OfferCards/HSCMoreCard.vue";
         line-height: 4rem;
         letter-spacing: 0.08rem;
         text-transform: uppercase;
+        opacity: 0.08;
     }
     .title {
         align-self: stretch;
@@ -330,14 +332,15 @@ import HSCMoreCard from "../OfferCards/HSCMoreCard.vue";
     .promo-text {
         align-self: stretch;
         text-align: center;
-        color: var(--Text-Background-text, #f5f5f5);
+        color: var(--Text-Primary, #181818);
         font-family: Montserrat;
         font-size: 10rem;
         font-style: normal;
         font-weight: 700;
-        line-height: 10rem; /* 100% */
+        line-height: 10rem;
         letter-spacing: 0.2rem;
         text-transform: uppercase;
+        opacity: 0.08;
     }
     .title {
         align-self: stretch;

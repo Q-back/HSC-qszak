@@ -126,7 +126,7 @@ export default {
         align-self: stretch;
     }
     .promo-text {
-        color: var(--Text-Background-text, #f5f5f5);
+        color: var(--Text-Primary, #181818);
         text-align: center;
         font-family: Montserrat;
         font-size: 4rem;
@@ -135,6 +135,7 @@ export default {
         line-height: 4rem;
         letter-spacing: 0.08rem;
         text-transform: uppercase;
+        opacity: 0.08;
     }
     .title {
         align-self: stretch;
@@ -237,7 +238,7 @@ export default {
     }
     .promo-text {
         text-align: center;
-        color: var(--Text-Background-text, #f5f5f5);
+        color: var(--Text-Primary, #181818);
         font-family: Montserrat;
         font-size: 4rem;
         font-style: normal;
@@ -245,6 +246,7 @@ export default {
         line-height: 4rem;
         letter-spacing: 0.08rem;
         text-transform: uppercase;
+        opacity: 0.08;
     }
     .title {
         align-self: stretch;
@@ -347,7 +349,7 @@ export default {
     }
     .promo-text {
         text-align: center;
-        color: var(--Text-Background-text, #f5f5f5);
+        color: var(--Text-Primary, #181818);
         font-family: Montserrat;
         font-size: 10rem;
         font-style: normal;
@@ -355,6 +357,7 @@ export default {
         line-height: 10rem;
         letter-spacing: 0.2rem;
         text-transform: uppercase;
+        opacity: 0.08;
     }
     .title {
         align-self: stretch;

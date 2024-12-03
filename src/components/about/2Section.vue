@@ -25,7 +25,7 @@
                 kojarzona pozytywnie.
             </p>
         </div>
-        <img class="single" :src="Photo1" alt="Założyciele" />
+        <img class="single" src="\images\onas\o-nas.jpg" alt="Trenerzy" />
     </div>
     <div class="section-3">
         <div class="section-3-text">
@@ -262,8 +262,8 @@ export default {
 
     img.single {
         display: flex;
-        width: 21.4375rem;
-        height: 21.4375rem;
+        width: 80%;
+        height: 80%;
         object-fit: contain;
         margin: 5vh auto 0 auto;
     }

@@ -8,72 +8,47 @@
                     <CloseModal @click="closeModal" style="cursor: pointer" />
                 </div>
                 <!-- <div class="contact-form">Formularz kontaktowy</div> -->
+                <p class="text">KONTAKT</p>
                 <div class="text">
                     Jeśli są Państwo zainteresowani naszą ofertą, prosimy o
                     kontakt.
                 </div>
             </div>
             <div class="info-bar">
-                <p class="text">Kontakt</p>
                 <div class="line">
-                    <div class="icon"><PhoneRed /></div>
+                    <div class="icon"><PhoneRedmodal /></div>
                     <div class="data">+48 793 951 015</div>
                 </div>
                 <div class="line">
-                    <div class="icon"><MailRed /></div>
+                    <div class="icon"><MailRedmodal /></div>
                     <div class="data">holisticsportcenter@gmail.com</div>
                 </div>
+                <div class="line">
+                    <div class="icon"><LocationRedmodal /></div>
+                    <ul>
+                        <li>Holistic Sport Center</li>
+                        <li>ul. Krakowska 29C</li>
+                        <li>50-424 Wrocław</li>
+                    </ul>
+                </div>
             </div>
-            <!-- <div class="form-box"></div>
-            <form>
-                <div class="input-box">
-                    <input
-                        type="text"
-                        id="name"
-                        placeholder="Imię i nazwisko"
-                        required
-                    />
-                </div>
-                <div class="input-box">
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="Adres e-mail (obowiązkowy)"
-                        required
-                    />
-                </div>
-                <div class="input-box">
-                    <input
-                        type="number"
-                        id="phone"
-                        placeholder="Numer telefonu (opcjonalny)"
-                    />
-                </div>
-                <div class="input-box2">
-                    <textarea
-                        type="text"
-                        id="text"
-                        placeholder="Treść wiadomości (obowiązkowe)"
-                        style="height: 6rem"
-                    ></textarea>
-                </div>
-            </form>
-            <button class="send">Wyślij wiadomość</button> -->
         </div>
     </div>
 </template>
 
 <script>
 import CloseModal from "../icons/closeModal.vue";
-import phoneRed from "../icons/phoneRed.vue";
-import mailRed from "../icons/mailRed.vue";
+import LocationRedmodal from "../icons/locationRedmodal.vue";
+import MailRedmodal from "../icons/mailRedmodal.vue";
+import PhoneRedmodal from "../icons/phoneRedmodal.vue";
 
 export default {
     name: "Modal2",
     components: {
         CloseModal,
-        phoneRed,
-        mailRed,
+        PhoneRedmodal,
+        MailRedmodal,
+        LocationRedmodal,
     },
     props: {
         isVisible: {
@@ -128,7 +103,7 @@ export default {
     padding: 2rem var(--space-300, 1.5rem);
     flex-direction: column;
     align-items: flex-end;
-    gap: var(--space-300, 1.5rem);
+    gap: 1.5rem;
     flex-shrink: 0;
     background: #fff;
     box-shadow: -12px 0px 24px 0px rgba(0, 0, 0, 0.32);
@@ -158,7 +133,7 @@ export default {
 
 .text {
     align-self: stretch;
-    color: var(--Text-Background-text-inverse, #313131);
+    color: var(--Text-Background-text-inverse, #181818);
     font-family: Montserrat;
     font-size: 1rem;
     font-style: normal;
@@ -169,14 +144,14 @@ export default {
 .info-bar {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: var(--space-300, 1.5rem);
     align-self: stretch;
-    margin-top: 15vh;
+    margin-top: 5vh;
 }
 
 p.text {
-    color: #313131;
+    color: #181818;
     font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
@@ -184,25 +159,39 @@ p.text {
     line-height: 1.75rem;
     letter-spacing: -0.00563rem;
 }
-
+ul {
+    list-style: none;
+}
 .line {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+
     gap: var(--space-150, 0.75rem);
 }
 .icon {
-    width: var(--space-300, 1.5rem);
-    height: var(--space-300, 1.5rem);
+    width: 3rem;
+    height: 3rem;
 }
 
 .data {
-    color: var(--Text-Inverse-primary, #313131);
+    color: var(--Text-Inverse-primary, #181818);
     font-family: Montserrat;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.5rem;
-    letter-spacing: -0.005rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.01rem;
+    text-decoration: none;
+}
+
+li {
+    color: var(--Text-Inverse-primary, #181818);
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 0.01rem;
     text-decoration: none;
 }
 </style>
