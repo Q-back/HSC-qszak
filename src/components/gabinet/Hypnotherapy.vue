@@ -1135,7 +1135,7 @@ export default {
     }
 
     button.primary {
-        margin-top: 18rem;
+        margin-top: 16rem;
         padding: 1.25rem 3rem;
         justify-content: center;
         gap: 1rem;

@@ -306,8 +306,8 @@ export default {
     .content {
         display: flex;
         /* width: 39.375rem; */
-        max-width: 50rem;
-        height: 26.4375rem;
+        /* max-width: 50rem;
+        height: 26.4375rem; */
         flex-direction: column;
         align-items: center;
         gap: var(--space-300, 1.5rem);
@@ -315,11 +315,8 @@ export default {
     }
 
     p.text {
-        flex: 1 0 0;
         align-self: stretch;
         color: var(--Text-Secondary, #484848);
-        max-height: 30vh;
-
         font-family: Montserrat;
         font-size: 1.125rem;
         font-style: normal;
@@ -360,8 +357,12 @@ export default {
         width: 36.375rem;
         height: 26.4375rem;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: var(--space-300, 1.5rem);
+    }
+
+    p.text {
+        flex: 1 0 0;
     }
 }
 </style>

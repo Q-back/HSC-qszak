@@ -195,7 +195,7 @@ const props = defineProps({
         align-self: stretch;
         color: var(--Text-Secondary, #484848);
         text-align: center;
-        min-height: 25vh;
+        min-height: 28vh;
 
         font-family: Montserrat;
         font-size: 1rem;

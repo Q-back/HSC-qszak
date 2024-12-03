@@ -636,9 +636,9 @@ export default {
 
     img.single {
         display: flex;
-        width: 22.3125rem;
-        height: 23.8125rem;
-        flex-shrink: 0;
+        width: 600px;
+        height: 400px;
+        /* flex-shrink: 0; */
         object-fit: contain;
     }
 

@@ -90,6 +90,7 @@ export default {
         font-weight: 700;
         line-height: 1.5rem; /* 133.333% */
         text-transform: uppercase;
+        cursor: pointer;
     }
 }
 
@@ -144,6 +145,7 @@ export default {
         font-weight: 700;
         line-height: 1.5rem; /* 133.333% */
         text-transform: uppercase;
+        cursor: pointer;
     }
 }
 </style>
