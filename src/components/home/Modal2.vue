@@ -8,7 +8,7 @@
                     <CloseModal @click="closeModal" style="cursor: pointer" />
                 </div>
                 <!-- <div class="contact-form">Formularz kontaktowy</div> -->
-                <p class="text">KONTAKT</p>
+                <p class="text-header">KONTAKT</p>
                 <div class="text">
                     Jeśli są Państwo zainteresowani naszą ofertą, prosimy o
                     kontakt.
@@ -132,7 +132,7 @@ export default {
 }
 
 .text {
-    align-self: stretch;
+    /* align-self: stretch; */
     color: var(--Text-Background-text-inverse, #181818);
     font-family: Montserrat;
     font-size: 1rem;
@@ -140,6 +140,15 @@ export default {
     font-weight: 400;
     line-height: 1.5rem;
     letter-spacing: -0.005rem;
+}
+.text-header {
+    color: #181818;
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.75rem;
+    letter-spacing: -0.00563rem;
 }
 .info-bar {
     display: flex;
@@ -150,15 +159,6 @@ export default {
     margin-top: 5vh;
 }
 
-p.text {
-    color: #181818;
-    font-family: Montserrat;
-    font-size: 1.125rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.75rem;
-    letter-spacing: -0.00563rem;
-}
 ul {
     list-style: none;
 }

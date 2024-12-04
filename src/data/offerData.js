@@ -252,8 +252,8 @@ export const offerData = [
         imgAlt: "Zdjęcie z treningu",
         imgSrc2: "/images/offercards/combat.jpg",
         imgAlt2: "Zdjęcie z treningu",
-        imgSrc3: "/images/stretching/stretching1.jpg",
-        imgAlt3: "Zdjęcie z treningu siłowego",
+        imgSrc3: "/images/stretching/stretching1.JPG",
+        imgAlt3: "Zdjęcie z treningu",
         description:
             "Stretching to relaksujący trening mobilizacji, który poprawia elastyczność, zwiększa zakres ruchu i pomaga zredukować napięcie mięśni.",
         day: "Indywidualne Zapisy",
