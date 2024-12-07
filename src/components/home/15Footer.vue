@@ -17,7 +17,10 @@
                     >Hipnoterapia</RouterLink
                 >
                 <button class="item" @click="showModal">Kontakt</button>
-                <Modal :isVisible="isModalVisible" @close="closeModal"></Modal>
+                <Modal2
+                    :isVisible="isModalVisible"
+                    @close="closeModal"
+                ></Modal2>
             </div>
 
             <div class="contact-data">
@@ -102,7 +105,7 @@ import InstagramRed from "../icons/instagramRed.vue";
 import LocationRed from "../icons/locationRed.vue";
 import MailRed from "../icons/mailRed.vue";
 import PhoneRed from "../icons/phoneRed.vue";
-import Modal from "./Modal.vue";
+import Modal2 from "../home/Modal2.vue";
 
 export default {
     name: "Footer",
@@ -115,7 +118,7 @@ export default {
         MailRed,
         PhoneRed,
         RouterLink,
-        Modal,
+        Modal2,
     },
     setup() {
         const isModalVisible = ref(false);

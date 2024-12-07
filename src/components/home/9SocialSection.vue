@@ -19,30 +19,24 @@
             <div class="box"><instagram1 /></div>
             <div class="box"><instagram2 /></div>
             <div class="box"><instagram3 /></div>
-            <div class="box"><instagram4 /></div>
         </div>
     </section>
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import instagram1 from "../instagram/instagram1.vue";
 import instagram2 from "../instagram/instagram2.vue";
 import instagram3 from "../instagram/instagram3.vue";
-import instagram4 from "../instagram/instagram4.vue";
 
 export default {
     name: "SocialSection",
     components: {
-        Swiper,
-        SwiperSlide,
         instagram1,
         instagram2,
         instagram3,
-        instagram4,
     },
 
     setup() {

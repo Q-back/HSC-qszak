@@ -286,7 +286,7 @@ export default {
 
     .class-description {
         display: flex;
-        width: 21.4375rem;
+        width: 70%;
         flex-direction: column;
         align-items: flex-start;
         gap: 2rem;
@@ -328,7 +328,8 @@ export default {
     }
 
     .img-description {
-        height: 12rem;
+        height: 100%;
+        width: 100%;
         align-self: stretch;
         background: lightgray 50% / cover no-repeat;
         margin-bottom: 10vh;
@@ -336,7 +337,7 @@ export default {
 
     .class-user {
         display: flex;
-        width: 21.4375rem;
+        width: 70%;
         flex-direction: column;
         align-items: flex-start;
         gap: 2rem;
@@ -344,7 +345,8 @@ export default {
     }
 
     .img-users {
-        height: 12rem;
+        height: 100%;
+        width: 100%;
         align-self: stretch;
         /* background: lightgray 50% / cover no-repeat; */
     }
@@ -584,8 +586,9 @@ export default {
     }
 
     .img-description {
-        height: 27.75rem;
-        align-self: stretch;
+        height: 80%;
+        width: 80%;
+        align-self: center;
         background: lightgray 50% / cover no-repeat;
     }
 
@@ -600,8 +603,9 @@ export default {
     }
 
     .img-users {
-        height: 27.75rem;
-        align-self: stretch;
+        height: 80%;
+        width: 80%;
+        align-self: center;
         /* background: lightgray 50% / cover no-repeat; */
     }
 
@@ -837,8 +841,8 @@ export default {
     }
 
     .img-description {
-        height: 27.75rem;
-        max-width: 60vw;
+        height: 50%;
+        width: 50%;
         align-self: stretch;
         background: lightgray 50% / cover no-repeat;
     }
@@ -853,8 +857,8 @@ export default {
     }
 
     .img-users {
-        height: 27.75rem;
-        max-width: 60vw;
+        height: 50%;
+        width: 50%;
         align-self: stretch;
         /* background: lightgray 50% / cover no-repeat; */
     }

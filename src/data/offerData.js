@@ -52,8 +52,8 @@ export const offerData = [
     {
         service: "Trening motoryczny",
         subtitle: "Personalny",
-        coach: "Michał Kulej, Mateusz Flejterski, Tomasz Rudolf, Tomasz Wroński, Maciej Weszka",
-        coachIds: ["MK1", "MF1", "TR1", "TW1", "MW2"],
+        coach: "Michał Kulej, Jakub Kulej, Mateusz Flejterski, Tomasz Rudolf, Tomasz Wroński, Maciej Weszka",
+        coachIds: ["MK1", "JK1", "MF1", "TR1", "TW1", "MW2"],
         imgSrc: "/images/photo/gymoffer.jpg",
         imgSrc0: "/images/photo/maingym.jpg",
         imgAlt: "Zdjęcie z treningu motorycznego",

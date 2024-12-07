@@ -7,7 +7,7 @@
         <div
             class="offer-card-top"
             :style="{
-                backgroundImage: `url(${imgSrc})`,
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${imgSrc})`,
                 filter:
                     isLargeScreen && !isHovered
                         ? 'grayscale(100%)'
@@ -119,11 +119,11 @@ export default {
         color: var(--Text-Inverse-primary, #fff);
         text-align: center;
         font-family: Montserrat;
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-style: normal;
         font-weight: 700;
-        line-height: 1.25rem;
-        letter-spacing: 0.02rem;
+        line-height: 2rem;
+        letter-spacing: 0.03rem;
         text-transform: uppercase;
         background-color: rgba(0, 0, 0, 0.3);
     }
@@ -133,7 +133,7 @@ export default {
         color: var(--Text-Inverse-primary, #fff);
         text-align: center;
         font-family: Montserrat;
-        font-size: 1rem;
+        font-size: 1.25rem;
         font-style: normal;
         font-weight: 400;
         line-height: 1.5rem;

@@ -170,7 +170,7 @@ export default {
         letter-spacing: -0.005rem;
     }
     .card-name {
-        width: 25.8125rem;
+        /* width: 80%; */
         color: var(--Text-Primary, #181818);
         text-align: center;
         font-family: Montserrat;

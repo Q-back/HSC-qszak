@@ -315,6 +315,7 @@ export default {
         align-items: flex-start;
         gap: 2rem;
         align-self: stretch;
+        list-style: none;
     }
 
     .service-section-block-column-text {
@@ -641,6 +642,7 @@ export default {
         align-items: flex-start;
         gap: 2rem;
         align-self: stretch;
+        list-style: none;
     }
 
     .service-section-block-column-text {
@@ -967,6 +969,7 @@ export default {
         align-items: flex-start;
         gap: 2rem;
         align-self: stretch;
+        list-style: none;
     }
 
     .service-section-block-column-text {

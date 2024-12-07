@@ -98,7 +98,7 @@ export default {
     right: 0;
     top: 0;
     display: flex;
-    width: 23.4375rem;
+    width: 90%;
     height: 100vh;
     padding: 2rem var(--space-300, 1.5rem);
     flex-direction: column;
@@ -182,6 +182,7 @@ ul {
     line-height: 1.75rem;
     letter-spacing: 0.01rem;
     text-decoration: none;
+    word-break: break-all;
 }
 
 li {

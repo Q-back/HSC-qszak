@@ -24,6 +24,7 @@ export default {
         width: calc(100vw - var(--scrollbarWidth));
         height: 40vh;
         overflow: hidden;
+        background: var(--Surface-Inverse-primary, #181818);
     }
 }
 @media (min-width: 640px) and (max-width: 960px) {
@@ -32,6 +33,7 @@ export default {
         width: calc(100vw - var(--scrollbarWidth));
         height: 55vh;
         overflow: hidden;
+        background: var(--Surface-Inverse-primary, #181818);
     }
 }
 @media (min-width: 961px) {
@@ -40,6 +42,7 @@ export default {
         width: calc(100vw - var(--scrollbarWidth));
         height: 70vh;
         overflow: hidden;
+        background: var(--Surface-Inverse-primary, #181818);
     }
 }
 
