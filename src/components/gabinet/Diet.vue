@@ -454,7 +454,7 @@ export default {
     .video-container {
         position: relative;
         width: 100%;
-        height: 50vh;
+        height: 40vh;
         padding: 0rem var(--space-200, 1rem);
         display: flex;
         justify-content: center;
@@ -491,7 +491,8 @@ export default {
     }
 
     button.primary {
-        margin-top: 12rem;
+        position: relative;
+        top: 10vh;
         padding: 1.25rem 3rem;
         justify-content: center;
         gap: 1rem;

@@ -98,7 +98,7 @@ export default {
     right: 0;
     top: 0;
     display: flex;
-    width: 90%;
+    width: 95%;
     height: 100vh;
     padding: 2rem var(--space-300, 1.5rem);
     flex-direction: column;

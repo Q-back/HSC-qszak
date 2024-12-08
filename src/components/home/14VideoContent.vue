@@ -50,12 +50,13 @@ export default {
 @media (max-width: 640px) {
     .video-container {
         position: relative;
-        width: calc(19svw - var(--scrollbarWidth));
-        height: 50svh;
+        width: calc(99svw - var(--scrollbarWidth));
+        height: 40svh;
         padding: 10rem var(--space-200, 1rem);
         flex-direction: column;
         align-items: center;
         gap: var(--space-300, 1.5rem);
+        background: var(--Surface-Inverse-primary, #181818);
     }
     .video-player {
         position: absolute;
@@ -64,7 +65,7 @@ export default {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        z-index: -1;
+        z-index: 0;
     }
 
     .content {
@@ -89,7 +90,7 @@ export default {
 
     button.primary {
         position: relative;
-        top: 15vh;
+        top: 10vh;
         padding: 1.25rem 3rem;
         justify-content: center;
         gap: 1rem;

@@ -20,6 +20,9 @@
             <swiper-slide>
                 <img src="\images\galeria\gallery3.png" alt="Zdjęcie siłowni" />
             </swiper-slide>
+            <swiper-slide>
+                <img src="\images\galeria\gallery4.jpg" alt="Zdjęcie siłowni" />
+            </swiper-slide>
         </swiper>
     </div>
 </template>

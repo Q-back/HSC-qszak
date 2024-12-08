@@ -2,7 +2,9 @@
     <div>
         <div
             class="offer-hero"
-            :style="{ backgroundImage: `url(${trainingData.imgSrc0})` }"
+            :style="{
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${trainingData.imgSrc0})`,
+            }"
         >
             <div class="offer-promo">
                 <div class="subtitle">{{ trainingData.subtitle }}</div>
@@ -10,7 +12,7 @@
             </div>
         </div>
         <div class="wrapper">
-            <div class="callendar">
+            <div class="callendar" v-show="trainingData.timetable">
                 <div class="timetable-header">Terminarz zajęć</div>
                 <div v-if="trainingData.timetable" class="timetable">
                     <TimetableBox
@@ -176,6 +178,7 @@ export default {
 <style scoped>
 .wrapper {
     display: flex;
+    width: 100%;
     justify-content: center;
     flex-direction: column;
     padding: 0 2rem;
@@ -234,7 +237,7 @@ export default {
 
     .callendar {
         display: flex;
-        width: 21.4375rem;
+        width: 100%;
         flex-direction: column;
         align-items: center;
         gap: var(--space-300, 1.5rem);
@@ -286,7 +289,7 @@ export default {
 
     .class-description {
         display: flex;
-        width: 70%;
+        width: 100%;
         flex-direction: column;
         align-items: flex-start;
         gap: 2rem;
@@ -337,7 +340,7 @@ export default {
 
     .class-user {
         display: flex;
-        width: 70%;
+        width: 100%;
         flex-direction: column;
         align-items: flex-start;
         gap: 2rem;
@@ -388,11 +391,12 @@ export default {
     .video-container {
         position: relative;
         width: 100%;
-        height: 50vh;
+        height: 40vh;
         padding: 0rem var(--space-200, 1rem);
         display: flex;
         justify-content: center;
         align-items: center;
+        background: var(--Surface-Inverse-primary, #181818);
     }
 
     .video-player {
@@ -402,7 +406,7 @@ export default {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        z-index: -1;
+        z-index: 0;
     }
 
     .content {
@@ -426,7 +430,7 @@ export default {
 
     button.primary {
         position: relative;
-        top: 15vh;
+        top: 10vh;
         padding: 1.25rem 3rem;
         justify-content: center;
         gap: 1rem;

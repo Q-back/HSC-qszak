@@ -12,7 +12,11 @@
                 pracy z ludźmi.
             </p>
         </div>
-        <img class="single" src="\images\onas\szefowie.jpg" alt="Założyciele" />
+        <img
+            class="single1"
+            src="\images\onas\szefowie.png"
+            alt="Założyciele"
+        />
     </div>
     <div class="section-2">
         <div class="section-2-text">
@@ -25,7 +29,7 @@
                 kojarzona pozytywnie.
             </p>
         </div>
-        <img class="single" src="\images\onas\o-nas.jpg" alt="Trenerzy" />
+        <img class="single2" src="\images\onas\o-nas.jpg" alt="Trenerzy" />
     </div>
     <div class="section-3">
         <div class="section-3-text">
@@ -67,6 +71,12 @@
                 <swiper-slide>
                     <img
                         src="\images\galeria\gallery3.png"
+                        alt="Zdjęcie siłowni"
+                    />
+                </swiper-slide>
+                <swiper-slide>
+                    <img
+                        src="\images\galeria\gallery4.jpg"
                         alt="Zdjęcie siłowni"
                     />
                 </swiper-slide>
@@ -260,10 +270,17 @@ export default {
         letter-spacing: -0.00563rem;
     }
 
-    img.single {
+    img.single1 {
         display: flex;
-        width: 80%;
-        height: 80%;
+        width: 60%;
+        height: 60%;
+        object-fit: contain;
+        margin: 5vh auto 0 auto;
+    }
+    img.single2 {
+        display: flex;
+        width: 100%;
+        height: 100%;
         object-fit: contain;
         margin: 5vh auto 0 auto;
     }
@@ -448,10 +465,17 @@ export default {
         letter-spacing: -0.00563rem;
     }
 
-    img.single {
+    img.single1 {
         display: flex;
-        width: 22.3125rem;
-        height: 23.8125rem;
+        width: 40%;
+        height: 40%;
+        flex-shrink: 0;
+        object-fit: contain;
+    }
+    img.single2 {
+        display: flex;
+        width: 60%;
+        height: 80%;
         flex-shrink: 0;
         object-fit: contain;
     }
@@ -634,11 +658,17 @@ export default {
         letter-spacing: -0.00563rem;
     }
 
-    img.single {
+    img.single1 {
         display: flex;
-        width: 600px;
-        height: 400px;
-        /* flex-shrink: 0; */
+        width: 30%;
+        height: 30%;
+        object-fit: contain;
+    }
+
+    img.single2 {
+        display: flex;
+        width: 50%;
+        height: 50%;
         object-fit: contain;
     }
 
