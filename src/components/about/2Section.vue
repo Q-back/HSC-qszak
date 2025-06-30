@@ -12,11 +12,7 @@
                 pracy z ludźmi.
             </p>
         </div>
-        <img
-            class="single1"
-            src="\images\onas\szefowie.png"
-            alt="Założyciele"
-        />
+        <img class="single1" src="\images\onas\kuleje2.jpg" alt="Założyciele" />
     </div>
     <div class="section-2">
         <div class="section-2-text">

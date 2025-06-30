@@ -12,6 +12,7 @@ import Diet from "./components/gabinet/Diet.vue";
 import Hypnotherapy from "./components/gabinet/Hypnotherapy.vue";
 import CoachPage from "./components/CoachCards/CoachPage.vue";
 import OfferPage from "./components/OfferCards/OfferPage.vue";
+import Policy from "./components/home/policy.vue";
 
 const routes = [
     { path: "/", name: "Home", component: Home },
@@ -21,6 +22,7 @@ const routes = [
     { path: "/fizjoterapia", name: "Fizjoterapia", component: Physio },
     { path: "/dietetyka", name: "Dietetyka", component: Diet },
     { path: "/hipnoterapia", name: "Hipnoterapia", component: Hypnotherapy },
+    { path: "/prywatnosc", name: "Polityka-Monitoringu", component: Policy },
     {
         path: "/kadra/:coachName",
         name: "Karta-Trenera",

@@ -19,16 +19,16 @@ export const coachData = [
         description:
             "Trener Personalny, Absolwent Akademii Wychowania Fizycznego we Wrocławiu z tytułem magistra Sportu o specjalizacji Trener Przygotowania Motorycznego.\nUzyskał również tytuł Menedżera Sportu. Ukończył również kurs Przygotowania Pedagogicznego.Trener II klasy piłki nożnej z dyplomem UEFA B, instruktor Kulturystyki, instruktor Kettlebell, instruktor Boksu, a także instruktor Kickboxingu wystawiony przez Polski Związek Kickboxingu. Ukończył wiele kursów związanych z szeroko pojętym treningiem i przygotowaniem motorycznym, a także z zagadnieniami związanymi z dietetyką i suplementacją. Od najmłodszych lat związany ze sportem, ma za sobą 24 lata uprawiania piłki nożnej na poziomie 3 i 4 ligi, wystartował w debiutach kulturystycznych w kategorii Męska Sylwetka, aktualnie posiada 3 stopień uczniowski Kickboxingu, startuje na zawodach i galach w formule K1.\nWieloletni, doświadczony trener personalny, pracujący od ponad 12 lat we Wrocławiu z wieloma podopiecznymi, którym pomaga w uzyskaniu określonych celów tj.: poprawa zdrowia, zmiana sylwetki, polepszenie zdolności motorycznych, przygotowanie do rywalizacji sportowej, zmiana nawyków żywieniowych.",
     },
-    {
-        id: "FK1",
-        name: "Filip Krasiński",
-        position: "Trener Personalny",
-        skills: "personal",
-        imgSrc: "/images/kadra/FilipKrasiński.png",
-        imgAlt: "Zdjęcie Filipa Krasińskiego",
-        description:
-            "Trener Personalny, sportowiec, absolwent Szkoły Mistrzostwa Sportowego “SMS Junior Wrocław”. Pasjonat sportu, podróżowania i rozwoju osobistego. Wieloletni siatkarz z dużymi osiągnięciami sportowymi na różnych szczeblach. Ukończył dziesiątki szkoleń z zakresu dietetyki, suplementacji oraz kursów związanych z programowaniem treningowym.\nMa za sobą już dziesiątki przemian swoich podopiecznych. Jego mottem jest „Dziś zrób to czego innym się nie chce, a jutro będziesz miał to czego inni pragną.”\nW ofercie możecie znaleźć takie usługi jak: treningi siłowe indywidualne lub w parze, trening medyczny oraz współpraca online. Stawia na dobre relacje ze swoimi podopiecznymi, jak i również zmian stylu życia tak, aby efekty sylwetkowe byłby jak najlepsze.",
-    },
+    // {
+    //     id: "FK1",
+    //     name: "Filip Krasiński",
+    //     position: "Trener Personalny",
+    //     skills: "personal",
+    //     imgSrc: "/images/kadra/FilipKrasiński.png",
+    //     imgAlt: "Zdjęcie Filipa Krasińskiego",
+    //     description:
+    //         "Trener Personalny, sportowiec, absolwent Szkoły Mistrzostwa Sportowego “SMS Junior Wrocław”. Pasjonat sportu, podróżowania i rozwoju osobistego. Wieloletni siatkarz z dużymi osiągnięciami sportowymi na różnych szczeblach. Ukończył dziesiątki szkoleń z zakresu dietetyki, suplementacji oraz kursów związanych z programowaniem treningowym.\nMa za sobą już dziesiątki przemian swoich podopiecznych. Jego mottem jest „Dziś zrób to czego innym się nie chce, a jutro będziesz miał to czego inni pragną.”\nW ofercie możecie znaleźć takie usługi jak: treningi siłowe indywidualne lub w parze, trening medyczny oraz współpraca online. Stawia na dobre relacje ze swoimi podopiecznymi, jak i również zmian stylu życia tak, aby efekty sylwetkowe byłby jak najlepsze.",
+    // },
     {
         id: "KŻ1",
         name: "Klaudia Żmijewska",

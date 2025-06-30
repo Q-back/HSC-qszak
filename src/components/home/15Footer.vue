@@ -17,6 +17,9 @@
                     >Hipnoterapia</RouterLink
                 >
                 <button class="item" @click="showModal">Kontakt</button>
+                <RouterLink to="/prywatnosc" class="item"
+                    >Regulamin Monitoringu</RouterLink
+                >
                 <Modal2
                     :isVisible="isModalVisible"
                     @close="closeModal"
