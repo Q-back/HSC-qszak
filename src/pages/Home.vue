@@ -14,7 +14,6 @@
     <VideoContent />
     <Footer />
     <Modal />
-    <Policy />
 </template>
 
 <script>
@@ -33,7 +32,6 @@ import ContactSection from "@/components/home/13ContactSection.vue";
 import VideoContent from "@/components/home/14VideoContent.vue";
 import Footer from "@/components/home/15Footer.vue";
 import Modal from "@/components/home/Modal.vue";
-import Policy from "@/components/home/policy.vue";
 
 export default {
     name: "Home",
@@ -53,7 +51,6 @@ export default {
         VideoContent,
         Footer,
         Modal,
-        Policy,
     },
 };
 </script>
