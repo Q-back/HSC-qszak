@@ -57,18 +57,19 @@
         </div>
 
         <button class="contact" @click="showModal">Kontakt</button>
-        <Modal2 :isVisible="isModalVisible" @close="closeModal"></Modal2>
+        <Modal3 :isVisible="isModalVisible" @close="closeModal"></Modal3>
     </nav>
 </template>
 
 <script>
 import { ref, onMounted, onBeforeUnmount } from "vue";
-import Modal2 from "./Modal2.vue";
+
 import LogoHSC from "@/components/icons/LogoHSC.vue";
 import FacebookIcon from "@/components/icons/facebook.vue";
 import InstagramIcon from "@/components/icons/instagram.vue";
 import { RouterLink } from "vue-router";
 import ChevronDown from "../icons/ChevronDown.vue";
+import Modal3 from "./Modal3.vue";
 
 export default {
     name: "Navigation",
@@ -76,7 +77,7 @@ export default {
         LogoHSC,
         FacebookIcon,
         InstagramIcon,
-        Modal2,
+        Modal3,
         RouterLink,
         ChevronDown,
     },

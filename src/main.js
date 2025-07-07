@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
+import VueRecaptcha from "vue-recaptcha";
 
 import { createWebHistory, createRouter } from "vue-router";
 
@@ -49,4 +50,9 @@ const router = createRouter({
     },
 });
 
-createApp(App).use(router).mount("#app");
+const app = createApp(App);
+
+app.use(router);
+app.component("vue-recaptcha", VueRecaptcha);
+
+app.mount("#app");

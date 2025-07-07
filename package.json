@@ -9,11 +9,15 @@
   "dependencies": {
     "@glidejs/glide": "^3.6.2",
     "core-js": "^3.8.3",
+    "emailjs-com": "^3.2.0",
     "swiper": "^11.1.14",
     "vue": "^3.2.13",
     "vue-burger-menu": "^2.0.5",
+    "vue-recaptcha": "^3.0.0-alpha.6",
+    "vue-recaptcha-v3": "^2.0.1",
     "vue-router": "^4.0.13",
     "vue3-burger-menu": "^1.1.1",
+    "vue3-recaptcha-v2": "^2.1.0",
     "vuetify": "^3.5.17"
   },
   "devDependencies": {
