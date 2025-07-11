@@ -28,13 +28,14 @@
                     required
                 ></textarea>
 
-                <!-- Komponent vue-recaptcha -->
-                <vue-recaptcha
-                    ref="recaptcha"
-                    sitekey="6LcHOnUrAAAAAFZAcEi8L6Xw9CAC6K5x2wJG6Mll"
-                    @verify="onCaptchaVerified"
-                    @expired="onCaptchaExpired"
-                />
+                <!-- Google reCAPTCHA -->
+                <div
+                    ref="recaptchaDiv"
+                    class="g-recaptcha"
+                    data-sitekey="6LcHOnUrAAAAAFZAcEi8L6Xw9CAC6K5x2wJG6Mll"
+                    data-callback="onCaptchaVerified"
+                    data-expired-callback="onCaptchaExpired"
+                ></div>
 
                 <button type="submit">Wyślij</button>
             </form>
@@ -62,9 +63,37 @@ export default {
             },
             statusMessage: "",
             recaptchaToken: "",
+            recaptchaWidgetId: null,
         };
     },
+    mounted() {
+        // Load Google reCAPTCHA script if not already loaded
+        if (!window.grecaptcha) {
+            const script = document.createElement("script");
+            script.src = "https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit";
+            script.async = true;
+            script.defer = true;
+            document.body.appendChild(script);
+        } else {
+            this.renderRecaptcha();
+        }
+        window.vueRecaptchaApiLoaded = this.renderRecaptcha;
+        window.onCaptchaVerified = this.onCaptchaVerified;
+        window.onCaptchaExpired = this.onCaptchaExpired;
+    },
     methods: {
+        renderRecaptcha() {
+            if (this.recaptchaWidgetId !== null) return;
+            if (!this.$refs.recaptchaDiv) return;
+            this.recaptchaWidgetId = window.grecaptcha.render(
+                this.$refs.recaptchaDiv,
+                {
+                    sitekey: "6LcHOnUrAAAAAFZAcEi8L6Xw9CAC6K5x2wJG6Mll",
+                    callback: this.onCaptchaVerified,
+                    "expired-callback": this.onCaptchaExpired,
+                }
+            );
+        },
         closeModal() {
             this.$emit("close");
             this.resetForm();
@@ -113,7 +142,6 @@ export default {
                     () => {
                         this.statusMessage = "Wiadomość została wysłana.";
                         this.resetForm();
-                        this.$refs.recaptcha.reset();
                         setTimeout(() => (this.statusMessage = ""), 4000);
                         this.closeModal();
                     },
@@ -131,8 +159,8 @@ export default {
             this.form.phone = "";
             this.form.message = "";
             this.recaptchaToken = "";
-            if (this.$refs.recaptcha) {
-                this.$refs.recaptcha.reset();
+            if (window.grecaptcha && this.recaptchaWidgetId !== null) {
+                window.grecaptcha.reset(this.recaptchaWidgetId);
             }
         },
     },
