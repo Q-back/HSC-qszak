@@ -181,11 +181,18 @@ export default {
 }
 .modal3-content {
     background-color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    max-width: 400px;
-    width: 100%;
+    padding: 2.5rem 2rem 2rem 2rem;
+    border-radius: 16px;
+    width: 90vw;
+    height: 90vh;
+    max-width: 900px;
+    max-height: 700px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
 }
 .close-button {
     position: absolute;
