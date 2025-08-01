@@ -1,34 +1,51 @@
 <template>
-    <div v-if="isVisible" class="modal3">
-        <div class="modal3-content">
-            <button class="close-button" @click="closeModal">✕</button>
-            <h2>Formularz Kontaktowy</h2>
+    <div>
+        <div class="overlay" v-if="isVisible"></div>
+        <div class="modal" v-if="isVisible">
+            <div class="header">
+                <div class="close-box">
+                    <button class="close-modal" @click="closeModal">✕</button>
+                </div>
+                <div class="contact-form">Formularz kontaktowy</div>
+                <div class="text">
+                    Jeśli są Państwo zainteresowani naszą ofertą, prosimy o
+                    wypełnienie poniższego formularza kontaktowego.
+                </div>
+            </div>
+            <div class="form-box"></div>
             <form @submit.prevent="submitForm">
-                <input
-                    v-model="form.name"
-                    type="text"
-                    placeholder="Imię i nazwisko"
-                    required
-                />
-                <input
-                    v-model="form.email"
-                    type="email"
-                    placeholder="E-mail"
-                    required
-                />
-                <input
-                    v-model="form.phone"
-                    type="tel"
-                    placeholder="Numer telefonu"
-                    required
-                />
-                <textarea
-                    v-model="form.message"
-                    placeholder="Wiadomość"
-                    required
-                ></textarea>
-
-                <!-- Google reCAPTCHA -->
+                <div class="input-box">
+                    <input
+                        v-model="form.name"
+                        type="text"
+                        placeholder="Imię i nazwisko"
+                        required
+                    />
+                </div>
+                <div class="input-box">
+                    <input
+                        v-model="form.email"
+                        type="email"
+                        placeholder="E-mail"
+                        required
+                    />
+                </div>
+                <div class="input-box">
+                    <input
+                        v-model="form.phone"
+                        type="tel"
+                        placeholder="Numer telefonu"
+                        required
+                    />
+                </div>
+                <div class="input-box2">
+                    <textarea
+                        v-model="form.message"
+                        placeholder="Wiadomość"
+                        style="height: 6rem"
+                        required
+                    ></textarea>
+                </div>
                 <div
                     ref="recaptchaDiv"
                     class="g-recaptcha"
@@ -36,8 +53,7 @@
                     data-callback="onCaptchaVerified"
                     data-expired-callback="onCaptchaExpired"
                 ></div>
-
-                <button type="submit">Wyślij</button>
+                <button class="send" type="submit">Wyślij wiadomość</button>
             </form>
             <p v-if="statusMessage" class="status-message">
                 {{ statusMessage }}
@@ -168,56 +184,300 @@ export default {
 </script>
 
 <style scoped>
-.modal3 {
+.no-scroll {
+    overflow: hidden;
+}
+
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.modal3-content {
-    background-color: white;
-    padding: 2.5rem 2rem 2rem 2rem;
-    border-radius: 16px;
-    width: 90vw;
-    height: 90vh;
-    max-width: 900px;
-    max-height: 700px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 998;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    overflow-y: auto;
+    align-items: flex-end;
 }
-.close-button {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    font-size: 1.2rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
+
+@media (max-width: 1384px) {
+    .modal {
+        position: fixed;
+        z-index: 999;
+        right: 0;
+        top: 0;
+        display: flex;
+        width: 23.4375rem;
+        height: 100vh;
+        padding: 2rem var(--space-300, 1.5rem);
+        flex-direction: column;
+        align-items: flex-end;
+        gap: var(--space-300, 1.5rem);
+        flex-shrink: 0;
+        background: #fff;
+        box-shadow: -12px 0px 24px 0px rgba(0, 0, 0, 0.32);
+        overflow: hidden;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-100, 0.5rem);
+        align-self: stretch;
+    }
+
+    .close-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: var(--space-200, 1rem);
+        align-self: stretch;
+    }
+
+    .contact-form {
+        align-self: stretch;
+        color: #000;
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.5rem;
+        letter-spacing: 0.0225rem;
+        text-transform: uppercase;
+    }
+
+    .close-modal {
+        width: var(--space-300, 1.5rem);
+        height: var(--space-300, 1.5rem);
+        background: transparent;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .text {
+        align-self: stretch;
+        color: var(--Text-Background-text-inverse, #313131);
+        font-family: Montserrat;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: -0.005rem;
+    }
+
+    .form-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        align-self: stretch;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-300, 1.5rem);
+        align-self: stretch;
+    }
+
+    .input-box {
+        display: flex;
+        height: 3.625rem;
+        min-width: 20rem;
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+        gap: 0.625rem;
+        align-self: stretch;
+        border-bottom: 1px solid #545454;
+        background: #fff;
+    }
+
+    .input-box2 {
+        display: flex;
+        height: 8rem;
+        min-width: 20rem;
+        padding: 1rem;
+        align-items: flex-start;
+        gap: 0.625rem;
+        align-self: stretch;
+        border-bottom: 1px solid #545454;
+        background: #fff;
+    }
+
+    input,
+    textarea {
+        flex: 1 0 0;
+        color: #545454;
+        font-family: Montserrat;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: -0.005rem;
+        border: none;
+    }
+
+    button.send {
+        display: flex;
+        padding: 1.25rem 3rem;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        align-self: stretch;
+        background: var(--Surface-Brand, #e30613);
+        color: var(--Text-Inverse-primary, #fff);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.5rem;
+        text-transform: uppercase;
+    }
 }
-input,
-textarea {
-    display: block;
-    width: 100%;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    font-size: 1rem;
-}
-button[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    padding: 0.7rem 1.2rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+
+@media (min-width: 1385px) {
+    .modal {
+        position: fixed;
+        z-index: 999;
+        right: 0;
+        top: 0;
+        display: flex;
+        width: 57.8125rem;
+        height: 100vh;
+        padding: 1.5rem 4.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-300, 1.5rem);
+        flex-shrink: 0;
+        background-color: #fff;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-100, 0.5rem);
+        align-self: stretch;
+    }
+    .close-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: var(--space-200, 1rem);
+        align-self: stretch;
+    }
+    .contact-form {
+        align-self: stretch;
+        color: #000;
+        font-family: Montserrat;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3rem;
+        letter-spacing: 0.04rem;
+        text-transform: uppercase;
+    }
+
+    .close-modal {
+        width: var(--space-300, 1.5rem);
+        height: var(--space-300, 1.5rem);
+        background: transparent;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .text {
+        max-width: 40rem;
+        align-self: stretch;
+        color: var(--Text-Background-text-inverse, #313131);
+        font-family: Montserrat;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: -0.005rem;
+    }
+
+    .form-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        align-self: stretch;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        align-self: stretch;
+    }
+
+    .input-box {
+        display: flex;
+        height: 3.625rem;
+        min-width: 20rem;
+        padding: 1.25rem;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        align-self: stretch;
+        border-bottom: 1px solid #545454;
+        background: #fff;
+    }
+
+    .input-box2 {
+        display: flex;
+        height: 8rem;
+        min-width: 20rem;
+        padding: 1.25rem;
+        align-items: flex-start;
+        gap: 0.5rem;
+        align-self: stretch;
+        border-bottom: 1px solid #545454;
+        background: #fff;
+    }
+
+    input,
+    textarea {
+        flex: 1 0 0;
+        color: #545454;
+        font-family: Montserrat;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1rem;
+        letter-spacing: -0.005rem;
+        border: none;
+    }
+
+    button.send {
+        display: flex;
+        padding: 1rem 3rem;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        color: var(--Text-Inverse-primary, #fff);
+        text-align: center;
+        background: var(--Surface-Brand, #e30613);
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.5rem;
+        text-transform: uppercase;
+        border-color: #e30613;
+        cursor: pointer;
+    }
 }
 .status-message {
     margin-top: 1rem;
