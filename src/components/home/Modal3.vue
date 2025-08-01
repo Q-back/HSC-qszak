@@ -107,6 +107,13 @@ export default {
         }
         // No global callbacks for verification/expiration
     },
+    watch: {
+        isVisible(newVal) {
+            if (newVal && this._isRecaptchaScriptLoaded) {
+                this.renderRecaptcha();
+            }
+        }
+    },
     methods: {
         renderRecaptcha() {
             if (this.recaptchaWidgetId !== null) return;
