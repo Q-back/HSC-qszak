@@ -46,13 +46,6 @@
                         required
                     ></textarea>
                 </div>
-                <div
-                    ref="recaptchaDiv"
-                    class="g-recaptcha"
-                    data-sitekey="6LcHOnUrAAAAAFZAcEi8L6Xw9CAC6K5x2wJG6Mll"
-                    data-callback="onCaptchaVerified"
-                    data-expired-callback="onCaptchaExpired"
-                ></div>
                 <button class="send" type="submit">Wyślij wiadomość</button>
             </form>
             <p v-if="statusMessage" class="status-message">
@@ -80,75 +73,27 @@ export default {
             },
             statusMessage: "",
             recaptchaToken: "",
-            recaptchaWidgetId: null,
         };
     },
-    // Encapsulated script loading and callback assignment
     mounted() {
-        this._isRecaptchaScriptLoaded = false;
-        this._recaptchaScriptLoadPromise = null;
-
+        // Load reCAPTCHA v3 script if not already loaded
         if (!window.grecaptcha) {
             if (!document.getElementById('recaptcha-script')) {
                 const script = document.createElement("script");
                 script.id = "recaptcha-script";
-                script.src = "https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit";
+                script.src = "https://www.google.com/recaptcha/api.js?render=6LcHOnUrAAAAAFZAcEi8L6Xw9CAC6K5x2wJG6Mll";
                 script.async = true;
                 script.defer = true;
                 document.body.appendChild(script);
             }
-            window.vueRecaptchaApiLoaded = () => {
-                this._isRecaptchaScriptLoaded = true;
-                this.renderRecaptcha();
-            };
-        } else {
-            this._isRecaptchaScriptLoaded = true;
-            this.renderRecaptcha();
-        }
-        // No global callbacks for verification/expiration
-    },
-    watch: {
-        isVisible(newVal) {
-            if (newVal) {
-                this.renderRecaptcha();
-            } else {
-                this.recaptchaWidgetId = null;
-            }
         }
     },
     methods: {
-        renderRecaptcha() {
-            if (!this.isVisible) return;
-            if (this.recaptchaWidgetId !== null) return;
-            if (!this.$refs.recaptchaDiv) return;
-            if (!window.grecaptcha) return;
-            this.recaptchaWidgetId = window.grecaptcha.render(
-                this.$refs.recaptchaDiv,
-                {
-                    sitekey: "6LcHOnUrAAAAAFZAcEi8L6Xw9CAC6K5x2wJG6Mll",
-                    callback: (token) => this.onCaptchaVerified(token),
-                    "expired-callback": () => this.onCaptchaExpired(),
-                }
-            );
-        },
         closeModal() {
             this.$emit("close");
             this.resetForm();
         },
-        onCaptchaVerified(token) {
-            this.recaptchaToken = token;
-        },
-        onCaptchaExpired() {
-            this.recaptchaToken = "";
-        },
         submitForm() {
-            if (!this.recaptchaToken) {
-                this.statusMessage =
-                    "Proszę potwierdzić, że nie jesteś robotem.";
-                setTimeout(() => (this.statusMessage = ""), 4000);
-                return;
-            }
-
             if (
                 !this.form.name.trim() ||
                 !this.form.email.trim() ||
@@ -160,35 +105,58 @@ export default {
                 return;
             }
 
-            const templateParams = {
-                name: this.form.name,
-                email: this.form.email,
-                phone: this.form.phone,
-                message: this.form.message,
-                "g-recaptcha-response": this.recaptchaToken,
-            };
+            // Ensure grecaptcha is loaded
+            if (!window.grecaptcha) {
+                this.statusMessage = "reCAPTCHA nie jest załadowany. Spróbuj ponownie.";
+                setTimeout(() => (this.statusMessage = ""), 4000);
+                return;
+            }
 
-            emailjs
-                .send(
-                    "service_3lkk4bc",
-                    "template_9ke2oqi",
-                    templateParams,
-                    "8_zJ6rzBwwYM6iX1j"
-                )
-                .then(
-                    () => {
-                        this.statusMessage = "Wiadomość została wysłana.";
-                        this.resetForm();
+            window.grecaptcha.ready(() => {
+                window.grecaptcha.execute("6LcHOnUrAAAAAFZAcEi8L6Xw9CAC6K5x2wJG6Mll", { action: "contact_form" })
+                    .then((token) => {
+                        if (!token) {
+                            this.statusMessage = "reCAPTCHA nie powiodło się. Spróbuj ponownie.";
+                            setTimeout(() => (this.statusMessage = ""), 4000);
+                            return;
+                        }
+                        this.recaptchaToken = token;
+
+                        const templateParams = {
+                            name: this.form.name,
+                            email: this.form.email,
+                            phone: this.form.phone,
+                            message: this.form.message,
+                            "g-recaptcha-response": this.recaptchaToken,
+                        };
+
+                        emailjs
+                            .send(
+                                "service_3lkk4bc",
+                                "template_9ke2oqi",
+                                templateParams,
+                                "8_zJ6rzBwwYM6iX1j"
+                            )
+                            .then(
+                                () => {
+                                    this.statusMessage = "Wiadomość została wysłana.";
+                                    this.resetForm();
+                                    setTimeout(() => (this.statusMessage = ""), 4000);
+                                    this.closeModal();
+                                },
+                                (error) => {
+                                    this.statusMessage =
+                                        "Błąd podczas wysyłania wiadomości. Spróbuj ponownie.";
+                                    console.error("EmailJS error:", error);
+                                    setTimeout(() => (this.statusMessage = ""), 4000);
+                                }
+                            );
+                    })
+                    .catch(() => {
+                        this.statusMessage = "reCAPTCHA nie powiodło się. Spróbuj ponownie.";
                         setTimeout(() => (this.statusMessage = ""), 4000);
-                        this.closeModal();
-                    },
-                    (error) => {
-                        this.statusMessage =
-                            "Błąd podczas wysyłania wiadomości. Spróbuj ponownie.";
-                        console.error("EmailJS error:", error);
-                        setTimeout(() => (this.statusMessage = ""), 4000);
-                    }
-                );
+                    });
+            });
         },
         resetForm() {
             this.form.name = "";
@@ -196,16 +164,7 @@ export default {
             this.form.phone = "";
             this.form.message = "";
             this.recaptchaToken = "";
-            if (window.grecaptcha && this.recaptchaWidgetId !== null) {
-                window.grecaptcha.reset(this.recaptchaWidgetId);
-            }
         },
-    },
-    beforeUnmount() {
-        // Clean up any listeners or state if needed
-        if (window.vueRecaptchaApiLoaded) {
-            delete window.vueRecaptchaApiLoaded;
-        }
     }
 };
 </script>
