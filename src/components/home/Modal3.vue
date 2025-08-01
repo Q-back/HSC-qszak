@@ -66,6 +66,7 @@
 import emailjs from "emailjs-com";
 
 export default {
+    name: "ContactModal",
     props: {
         isVisible: Boolean,
     },
@@ -82,31 +83,41 @@ export default {
             recaptchaWidgetId: null,
         };
     },
+    // Encapsulated script loading and callback assignment
     mounted() {
-        // Load Google reCAPTCHA script if not already loaded
+        this._isRecaptchaScriptLoaded = false;
+        this._recaptchaScriptLoadPromise = null;
+
         if (!window.grecaptcha) {
-            const script = document.createElement("script");
-            script.src = "https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit";
-            script.async = true;
-            script.defer = true;
-            document.body.appendChild(script);
+            if (!document.getElementById('recaptcha-script')) {
+                const script = document.createElement("script");
+                script.id = "recaptcha-script";
+                script.src = "https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit";
+                script.async = true;
+                script.defer = true;
+                document.body.appendChild(script);
+            }
+            window.vueRecaptchaApiLoaded = () => {
+                this._isRecaptchaScriptLoaded = true;
+                this.renderRecaptcha();
+            };
         } else {
+            this._isRecaptchaScriptLoaded = true;
             this.renderRecaptcha();
         }
-        window.vueRecaptchaApiLoaded = this.renderRecaptcha;
-        window.onCaptchaVerified = this.onCaptchaVerified;
-        window.onCaptchaExpired = this.onCaptchaExpired;
+        // No global callbacks for verification/expiration
     },
     methods: {
         renderRecaptcha() {
             if (this.recaptchaWidgetId !== null) return;
             if (!this.$refs.recaptchaDiv) return;
+            if (!window.grecaptcha) return;
             this.recaptchaWidgetId = window.grecaptcha.render(
                 this.$refs.recaptchaDiv,
                 {
                     sitekey: "6LcHOnUrAAAAAFZAcEi8L6Xw9CAC6K5x2wJG6Mll",
-                    callback: this.onCaptchaVerified,
-                    "expired-callback": this.onCaptchaExpired,
+                    callback: (token) => this.onCaptchaVerified(token),
+                    "expired-callback": () => this.onCaptchaExpired(),
                 }
             );
         },
@@ -180,6 +191,12 @@ export default {
             }
         },
     },
+    beforeUnmount() {
+        // Clean up any listeners or state if needed
+        if (window.vueRecaptchaApiLoaded) {
+            delete window.vueRecaptchaApiLoaded;
+        }
+    }
 };
 </script>
 
