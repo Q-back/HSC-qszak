@@ -109,13 +109,16 @@ export default {
     },
     watch: {
         isVisible(newVal) {
-            if (newVal && this._isRecaptchaScriptLoaded) {
+            if (newVal) {
                 this.renderRecaptcha();
+            } else {
+                this.recaptchaWidgetId = null;
             }
         }
     },
     methods: {
         renderRecaptcha() {
+            if (!this.isVisible) return;
             if (this.recaptchaWidgetId !== null) return;
             if (!this.$refs.recaptchaDiv) return;
             if (!window.grecaptcha) return;
