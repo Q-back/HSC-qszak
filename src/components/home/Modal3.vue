@@ -81,7 +81,7 @@ export default {
             if (!document.getElementById('recaptcha-script')) {
                 const script = document.createElement("script");
                 script.id = "recaptcha-script";
-                script.src = "https://www.google.com/recaptcha/api.js?render=6LcHOnUrAAAAAFZAcEi8L6Xw9CAC6K5x2wJG6Mll";
+                script.src = "https://www.google.com/recaptcha/api.js?render=6LfNbJcrAAAAAIUW9M10wYCxsd2qEWM_mqJFfos1";
                 script.async = true;
                 script.defer = true;
                 document.body.appendChild(script);
@@ -113,7 +113,7 @@ export default {
             }
 
             window.grecaptcha.ready(() => {
-                window.grecaptcha.execute("6LcHOnUrAAAAAFZAcEi8L6Xw9CAC6K5x2wJG6Mll", { action: "contact_form" })
+                window.grecaptcha.execute("6LfNbJcrAAAAAIUW9M10wYCxsd2qEWM_mqJFfos1", { action: "contact_form" })
                     .then((token) => {
                         if (!token) {
                             this.statusMessage = "reCAPTCHA nie powiodło się. Spróbuj ponownie.";
