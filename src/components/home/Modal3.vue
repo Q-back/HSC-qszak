@@ -94,84 +94,85 @@ export default {
             this.$emit("close");
             this.resetForm();
         },
-        submitForm() {
+        async submitForm() {
+            try {
+                this.validateForm();
+                const token = await this.getRecaptchaToken();
+                await this.sendEmail(token);
+                this.statusMessage = "Wiadomość została wysłana.";
+                this.resetForm();
+                setTimeout(() => (this.statusMessage = ""), 4000);
+                this.closeModal();
+            } catch (error) {
+                this.handleError(error);
+            }
+        },
+        validateForm() {
             if (
                 !this.form.name.trim() ||
                 !this.form.email.trim() ||
                 !this.form.phone.trim() ||
                 !this.form.message.trim()
             ) {
-                this.statusMessage = "Proszę wypełnić wszystkie pola.";
-                setTimeout(() => (this.statusMessage = ""), 4000);
-                return;
+                throw new Error("Proszę wypełnić wszystkie pola.");
             }
-
-            // Ensure grecaptcha is loaded
+        },
+        async getRecaptchaToken() {
             if (!window.grecaptcha) {
-                this.statusMessage =
-                    "reCAPTCHA nie jest załadowany. Spróbuj ponownie.";
-                setTimeout(() => (this.statusMessage = ""), 4000);
-                return;
+                throw new Error("reCAPTCHA nie jest załadowany. Spróbuj ponownie.");
             }
-
-            window.grecaptcha.ready(() => {
-                window.grecaptcha
-                    .execute("6LfNbJcrAAAAAIUW9M10wYCxsd2qEWM_mqJFfos1", {
-                        action: "contact_form",
-                    })
-                    .then((token) => {
-                        if (!token) {
-                            this.statusMessage =
-                                "reCAPTCHA nie powiodło się. Spróbuj ponownie.";
-                            setTimeout(() => (this.statusMessage = ""), 4000);
-                            return;
-                        }
-                        this.recaptchaToken = token;
-
-                        const templateParams = {
-                            name: this.form.name,
-                            email: this.form.email,
-                            phone: this.form.phone,
-                            message: this.form.message,
-                            "g-recaptcha-response": this.recaptchaToken,
-                        };
-
-                        emailjs
-                            .send(
-                                "service_t1ixgod",
-                                "template_j1ssip9",
-                                templateParams,
-                                "pacB_5UGlPsvyPK1r"
-                            )
-                            .then(
-                                () => {
-                                    this.statusMessage =
-                                        "Wiadomość została wysłana.";
-                                    this.resetForm();
-                                    setTimeout(
-                                        () => (this.statusMessage = ""),
-                                        4000
-                                    );
-                                    this.closeModal();
-                                },
-                                (error) => {
-                                    this.statusMessage =
-                                        "Błąd podczas wysyłania wiadomości. Spróbuj ponownie.";
-                                    console.error("EmailJS error:", error);
-                                    setTimeout(
-                                        () => (this.statusMessage = ""),
-                                        4000
-                                    );
-                                }
-                            );
-                    })
-                    .catch((error) => {
-                        console.error("reCAPTCHA error:", error);
-                        this.statusMessage =
-                            "reCAPTCHA nie powiodło się. Spróbuj ponownie.";
-                        setTimeout(() => (this.statusMessage = ""), 4000);
-                    });
+            return new Promise((resolve, reject) => {
+                window.grecaptcha.ready(() => {
+                    window.grecaptcha
+                        .execute("6LfNbJcrAAAAAIUW9M10wYCxsd2qEWM_mqJFfos1", {
+                            action: "contact_form",
+                        })
+                        .then((token) => {
+                            if (!token) {
+                                reject(new Error("reCAPTCHA nie powiodło się. Spróbuj ponownie."));
+                            } else {
+                                this.recaptchaToken = token;
+                                resolve(token);
+                            }
+                        })
+                        .catch((error) => {
+                            reject(error || new Error("reCAPTCHA unknown error"));
+                        });
+                });
             });
+        },
+        async sendEmail(token) {
+            const templateParams = {
+                name: this.form.name,
+                email: this.form.email,
+                phone: this.form.phone,
+                message: this.form.message,
+                "g-recaptcha-response": token,
+            };
+            try {
+                await emailjs.send(
+                    "service_t1ixgod",
+                    "template_j1ssip9",
+                    templateParams,
+                    "pacB_5UGlPsvyPK1r"
+                );
+            } catch (error) {
+                throw error || new Error("Błąd podczas wysyłania wiadomości. Spróbuj ponownie.");
+            }
+        },
+        handleError(error) {
+            let msg = "Wystąpił nieoczekiwany błąd. Spróbuj ponownie.";
+            if (error && error.message) {
+                msg = error.message;
+            }
+            this.statusMessage = msg;
+            // Log error details for debugging
+            if (error !== undefined && error !== null) {
+                console.error("Contact form error:", error, typeof error);
+            } else {
+                console.error("Contact form error: Unknown error (null/undefined)");
+            }
+            setTimeout(() => (this.statusMessage = ""), 4000);
         },
         resetForm() {
             this.form.name = "";
