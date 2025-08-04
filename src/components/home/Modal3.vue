@@ -136,9 +136,13 @@ export default {
                                 resolve(token);
                             }
                         })
-                        .catch((error) => {
-                            reject(error || new Error("reCAPTCHA unknown error"));
-                        });
+.catch((error) => {
+    if (!error || typeof error !== "object" || !error.message) {
+        reject(new Error("reCAPTCHA unknown error"));
+    } else {
+        reject(error);
+    }
+});
                 });
             });
         },
