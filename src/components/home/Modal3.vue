@@ -78,10 +78,11 @@ export default {
     mounted() {
         // Load reCAPTCHA v3 script if not already loaded
         if (!window.grecaptcha) {
-            if (!document.getElementById('recaptcha-script')) {
+            if (!document.getElementById("recaptcha-script")) {
                 const script = document.createElement("script");
                 script.id = "recaptcha-script";
-                script.src = "https://www.google.com/recaptcha/api.js?render=6LfNbJcrAAAAAIUW9M10wYCxsd2qEWM_mqJFfos1";
+                script.src =
+                    "https://www.google.com/recaptcha/api.js?render=6LfNbJcrAAAAAIUW9M10wYCxsd2qEWM_mqJFfos1";
                 script.async = true;
                 script.defer = true;
                 document.body.appendChild(script);
@@ -107,16 +108,21 @@ export default {
 
             // Ensure grecaptcha is loaded
             if (!window.grecaptcha) {
-                this.statusMessage = "reCAPTCHA nie jest załadowany. Spróbuj ponownie.";
+                this.statusMessage =
+                    "reCAPTCHA nie jest załadowany. Spróbuj ponownie.";
                 setTimeout(() => (this.statusMessage = ""), 4000);
                 return;
             }
 
             window.grecaptcha.ready(() => {
-                window.grecaptcha.execute("6LfNbJcrAAAAAIUW9M10wYCxsd2qEWM_mqJFfos1", { action: "contact_form" })
+                window.grecaptcha
+                    .execute("6LfNbJcrAAAAAIUW9M10wYCxsd2qEWM_mqJFfos1", {
+                        action: "contact_form",
+                    })
                     .then((token) => {
                         if (!token) {
-                            this.statusMessage = "reCAPTCHA nie powiodło się. Spróbuj ponownie.";
+                            this.statusMessage =
+                                "reCAPTCHA nie powiodło się. Spróbuj ponownie.";
                             setTimeout(() => (this.statusMessage = ""), 4000);
                             return;
                         }
@@ -135,27 +141,34 @@ export default {
                                 "service_t1ixgod",
                                 "template_j1ssip9",
                                 templateParams,
-                                "pacB_5UGlPsvyPK1r",
-
-                    )
-                        .then(
-                            () => {
-                                    this.statusMessage = "Wiadomość została wysłana.";
+                                "pacB_5UGlPsvyPK1r"
+                            )
+                            .then(
+                                () => {
+                                    this.statusMessage =
+                                        "Wiadomość została wysłana.";
                                     this.resetForm();
-                                    setTimeout(() => (this.statusMessage = ""), 4000);
+                                    setTimeout(
+                                        () => (this.statusMessage = ""),
+                                        4000
+                                    );
                                     this.closeModal();
                                 },
                                 (error) => {
                                     this.statusMessage =
                                         "Błąd podczas wysyłania wiadomości. Spróbuj ponownie.";
                                     console.error("EmailJS error:", error);
-                                    setTimeout(() => (this.statusMessage = ""), 4000);
+                                    setTimeout(
+                                        () => (this.statusMessage = ""),
+                                        4000
+                                    );
                                 }
                             );
                     })
                     .catch((error) => {
                         console.error("reCAPTCHA error:", error);
-                        this.statusMessage = "reCAPTCHA nie powiodło się. Spróbuj ponownie.";
+                        this.statusMessage =
+                            "reCAPTCHA nie powiodło się. Spróbuj ponownie.";
                         setTimeout(() => (this.statusMessage = ""), 4000);
                     });
             });
@@ -167,7 +180,7 @@ export default {
             this.form.message = "";
             this.recaptchaToken = "";
         },
-    }
+    },
 };
 </script>
 
