@@ -132,13 +132,14 @@ export default {
 
                         emailjs
                             .send(
-                                "service_3lkk4bc",
-                                "template_9ke2oqi",
+                                "service_t1ixgod",
+                                "template_j1ssip9",
                                 templateParams,
-                                "8_zJ6rzBwwYM6iX1j"
-                            )
-                            .then(
-                                () => {
+                                "pacB_5UGlPsvyPK1r",
+
+                    )
+                        .then(
+                            () => {
                                     this.statusMessage = "Wiadomość została wysłana.";
                                     this.resetForm();
                                     setTimeout(() => (this.statusMessage = ""), 4000);
@@ -152,7 +153,8 @@ export default {
                                 }
                             );
                     })
-                    .catch(() => {
+                    .catch((error) => {
+                        console.error("reCAPTCHA error:", error);
                         this.statusMessage = "reCAPTCHA nie powiodło się. Spróbuj ponownie.";
                         setTimeout(() => (this.statusMessage = ""), 4000);
                     });
