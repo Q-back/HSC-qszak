@@ -104,6 +104,7 @@ export default {
                 setTimeout(() => (this.statusMessage = ""), 4000);
                 this.closeModal();
             } catch (error) {
+                console.log("Error in submitForm:", error);
                 this.handleError(error);
             }
         },
