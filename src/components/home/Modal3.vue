@@ -120,7 +120,9 @@ export default {
         },
         async getRecaptchaToken() {
             if (!window.grecaptcha) {
-                throw new Error("reCAPTCHA nie jest załadowany. Spróbuj ponownie.");
+                throw new Error(
+                    "reCAPTCHA nie jest załadowany. Spróbuj ponownie."
+                );
             }
             return new Promise((resolve, reject) => {
                 window.grecaptcha.ready(() => {
@@ -130,19 +132,27 @@ export default {
                         })
                         .then((token) => {
                             if (!token) {
-                                reject(new Error("reCAPTCHA nie powiodło się. Spróbuj ponownie."));
+                                reject(
+                                    new Error(
+                                        "reCAPTCHA nie powiodło się. Spróbuj ponownie."
+                                    )
+                                );
                             } else {
                                 this.recaptchaToken = token;
                                 resolve(token);
                             }
                         })
-.catch((error) => {
-    if (!error || typeof error !== "object" || !error.message) {
-        reject(new Error("reCAPTCHA unknown error"));
-    } else {
-        reject(error);
-    }
-});
+                        .catch((error) => {
+                            if (
+                                !error ||
+                                typeof error !== "object" ||
+                                !error.message
+                            ) {
+                                reject(new Error("reCAPTCHA unknown error"));
+                            } else {
+                                reject(error);
+                            }
+                        });
                 });
             });
         },
@@ -162,7 +172,12 @@ export default {
                     "pacB_5UGlPsvyPK1r"
                 );
             } catch (error) {
-                throw error || new Error("Błąd podczas wysyłania wiadomości. Spróbuj ponownie.");
+                throw (
+                    error ||
+                    new Error(
+                        "Błąd podczas wysyłania wiadomości. Spróbuj ponownie."
+                    )
+                );
             }
         },
         handleError(error) {
@@ -175,7 +190,9 @@ export default {
             if (error !== undefined && error !== null) {
                 console.error("Contact form error:", error, typeof error);
             } else {
-                console.error("Contact form error: Unknown error (null/undefined)");
+                console.error(
+                    "Contact form error: Unknown error (null/undefined)"
+                );
             }
             setTimeout(() => (this.statusMessage = ""), 4000);
         },
